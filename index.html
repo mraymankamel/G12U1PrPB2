@@ -71,7 +71,6 @@
         header p { margin: 0 0 5px 0; font-size: 16px; font-weight: 800; color: var(--accent-main); direction: ltr;}
         .slogan { font-family: 'Outfit', sans-serif; font-size: 14px; font-style: italic; color: var(--text-muted); margin: 0 0 15px 0 !important; letter-spacing: 2px; direction: ltr; display: inline-block;}
         
-        /* 📞 رقم الموبايل */
         .badge-info { 
             font-family: 'Outfit', sans-serif; font-size: 16px; font-weight: 900; color: var(--text-main); 
             background: var(--bg-color); 
@@ -386,7 +385,6 @@
 </head>
 <body id="main-body">
 
-<!-- 🛡️ نظام الحماية (Anti-Cheat Modal) - يعمل في الخلفية بصمت -->
 <div id="cheat-modal">
     <div class="cheat-content">
         <h1>🚨 تحذير أمني!</h1>
@@ -395,13 +393,12 @@
     </div>
 </div>
 
-<!-- ⏱️ شريط الوقت وزر الإخفاء (ثابت أعلى اليسار) -->
 <div class="timer-wrapper-fixed" id="timer-container" style="display: none;">
-    <div class="timer-box" id="timer-box"><div class="time-dot"></div><span id="timer-text">20:00</span></div>
+    <!-- تعديل النص الافتراضي ليكون 60:00 -->
+    <div class="timer-box" id="timer-box"><div class="time-dot"></div><span id="timer-text">60:00</span></div>
     <button type="button" class="timer-toggle-btn" id="btn-timer-view" onclick="toggleTimerView()" title="إخفاء/إظهار الوقت">👁️</button>
 </div>
 
-<!-- 📸 الإشعارات التحفيزية (ثابت أعلى اليمين) -->
 <div class="cheer-wrapper" id="cheer-wrapper">
     <div class="cheer-bubble">
         <img src="https://lh3.googleusercontent.com/d/1BqwA44F0BAwWMSwBnBeDIkfkNgBEtif-" alt="Mr. Ayman Kamel">
@@ -419,13 +416,11 @@
         <h1>Mr. Ayman Kamel</h1>
         <p>English Language Educator</p>
         <p class="slogan">"Let's learn together."</p>
-        <!-- إخفاء اسم التصميم ووضع رقم الهاتف -->
         <div class="badge-info" id="top-badge">📞 01284749899</div>
     </header>
 
     <div class="content-body">
         <div id="start-screen">
-            <!-- رسالة تحفيزية غامضة وملهمة (بدون تفاصيل تقنية) -->
             <div class="welcome-card">
                 <h3 style="color:var(--text-main);">🌟 ساحة التميز والتحدي!</h3>
                 <p style="font-size: 16px; line-height: 1.8; color: var(--text-muted); font-weight: 700;">أنت الآن على خط البداية لإثبات مهارتك الحقيقية. تذكر أن التفوق ليس صدفة، بل هو نتيجة للتركيز في أدق التفاصيل والثقة بالنفس.<br><br>خذ نفساً عميقاً، صفِّ ذهنك، واقرأ كل كلمة بعناية. نحن نثق في قدرتك على الوصول للقمة!</p>
@@ -459,7 +454,6 @@
             </div>
 
             <div class="station-card" id="q-box">
-                <!-- 🔊 النص يساراً وأيقونة الصوت يميناً -->
                 <div class="question-text">
                     <div class="question-text-wrapper">
                         <span id="question-text-content">--</span><span class="cursor" id="typing-cursor" style="display:none;"></span>
@@ -560,6 +554,8 @@ function soundBossWin() {
 
 function speakQuestion() {
     if ('speechSynthesis' in window) {
+        // إضافة أمر الإلغاء لمنع تداخل وتشابك الصوت إذا ضغط الطالب أكثر من مرة
+        window.speechSynthesis.cancel();
         let text = quizData[currentQuestion].q.replace(/_+/g, "blank");
         let msg = new SpeechSynthesisUtterance(text);
         msg.lang = 'en-US';
@@ -588,7 +584,7 @@ function initScratchCard() {
     let isDrawing = false;
     function scratch(e) {
         if(!isDrawing) return;
-        e.preventDefault();
+        e.preventDefault(); // منع تمرير الشاشة (Scroll) أثناء الخدش
         let rect = canvas.getBoundingClientRect();
         let x = (e.clientX || (e.touches && e.touches[0].clientX)) - rect.left;
         let y = (e.clientY || (e.touches && e.touches[0].clientY)) - rect.top;
@@ -685,10 +681,10 @@ const rawData = [
 
 let quizData = [];
 let currentQuestion = 0, userAnswers = {}, studentName = "", selectedAvatar = '🤍';
-let totalSeconds = 20 * 60, qTimeLeft = 15, timerInterval = null, isTimeAttack = false;
+// تعديل الوقت إلى 60 دقيقة
+let totalSeconds = 60 * 60, qTimeLeft = 15, timerInterval = null, isTimeAttack = false;
 let isSubmitting = false; 
 
-// 🛡️ متغيرات نظام الحماية (يعمل بصمت)
 let cheatWarnings = 0;
 const MAX_WARNINGS = 3;
 
@@ -711,7 +707,6 @@ function showCheatModal(msg) {
     soundWrongTime(); 
 }
 
-// 🛡️ تعطيل الكليك يمين والاختصارات بصمت
 document.addEventListener('contextmenu', event => event.preventDefault());
 
 document.addEventListener('keydown', function(e) {
@@ -730,14 +725,11 @@ document.addEventListener('cut', e => { e.preventDefault(); });
 function shuffleOptions() {
     quizData = JSON.parse(JSON.stringify(rawData));
     
-    // 🔀 خلط الأسئلة
     quizData.sort(() => Math.random() - 0.5); 
     
     quizData.forEach((item, index) => {
-        // تحديث الترقيم
         item.q = `${index + 1}. ` + item.q.replace(/^\d+\.\s*/, ''); 
         
-        // 🔀 خلط الاختيارات 
         let correctText = item.options[item.answer];
         item.options.sort(() => Math.random() - 0.5); 
         item.answer = item.options.indexOf(correctText);
@@ -802,7 +794,6 @@ function typeWriter(text, elementId, callback) {
 }
 
 function loadQuestion() {
-
     if(isTimeAttack) {
         qTimeLeft = 15; 
         document.getElementById("timer-box").classList.remove("danger");
@@ -902,7 +893,9 @@ function startTimer() {
             totalSeconds--;
             let m = Math.floor(totalSeconds / 60), s = totalSeconds % 60;
             document.getElementById("timer-text").innerText = `${m<10?'0'+m:m}:${s<10?'0'+s:s}`;
-            if (totalSeconds <= 120) document.getElementById("timer-box").classList.add("danger");
+            
+            // تحذير الوقت: يتحول اللون للأحمر عند آخر 5 دقائق (300 ثانية)
+            if (totalSeconds <= 300) document.getElementById("timer-box").classList.add("danger"); 
             if (totalSeconds <= 0) { clearInterval(timerInterval); calculateScore(); }
         }
     }, 1000);
@@ -1052,7 +1045,7 @@ function downloadCertificate() {
 
     ctx.fillStyle = "#10B981"; 
     ctx.font = "bold 55px 'Outfit', sans-serif";
-    ctx.fillText(`${finalScore} / ${quizData.length}  (${finalPercent}%)`, canvas.width / 2, 500);
+    ctx.fillText(`${window.finalScore} / ${quizData.length}  (${window.finalPercent}%)`, canvas.width / 2, 500);
 
     ctx.fillStyle = "#1E293B";
     ctx.font = "22px 'Outfit', sans-serif";
