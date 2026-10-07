@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <!-- Theme Name: Luminous Nova (Bright & Creative) -->
-    <title>Masterclass Grand Finale - Mr. Ayman Kamel</title>
+    <!-- Theme Name: Luminous Nova (Part 2 - 66 Qs) -->
+    <title>Masterclass Grand Finale - Part 2</title>
 
-    <meta property="og:title" content="🌟 التحدي الشامل الأكبر 🚀">
-    <meta property="og:description" content="اختبار النخبة الشامل. 79 سؤالاً لتأكيد إتقانك التام. هل تقبل التحدي؟">
-    <meta property="og:image" content="https://dummyimage.com/1200x630/FFFFFF/3B82F6.png&text=Luminous+Challenge">
+    <meta property="og:title" content="🌟 التحدي الشامل الأكبر (الجزء الثاني) 🚀">
+    <meta property="og:description" content="الجزء الختامي من اختبار النخبة الشامل. 66 سؤالاً لتأكيد إتقانك التام.">
+    <meta property="og:image" content="https://dummyimage.com/1200x630/FFFFFF/3B82F6.png&text=Luminous+Challenge+Part+2">
     
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Outfit:wght@400;500;700;800;900&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
@@ -28,11 +28,11 @@
         }
 
         /* 🌈 Bright Chroma Shifts */
-        body.theme-1 { --accent: #3B82F6; --accent-glow: rgba(59, 130, 246, 0.2); } /* Royal Blue */
-        body.theme-2 { --accent: #EC4899; --accent-glow: rgba(236, 72, 153, 0.2); } /* Vibrant Pink */
-        body.theme-3 { --accent: #8B5CF6; --accent-glow: rgba(139, 92, 246, 0.2); } /* Electric Purple */
-        body.theme-4 { --accent: #F59E0B; --accent-glow: rgba(245, 158, 11, 0.2); } /* Amber Gold */
-        body.theme-5 { --accent: #14B8A6; --accent-glow: rgba(20, 184, 166, 0.2); } /* Fresh Teal */
+        body.theme-1 { --accent: #3B82F6; --accent-glow: rgba(59, 130, 246, 0.2); } 
+        body.theme-2 { --accent: #EC4899; --accent-glow: rgba(236, 72, 153, 0.2); } 
+        body.theme-3 { --accent: #8B5CF6; --accent-glow: rgba(139, 92, 246, 0.2); } 
+        body.theme-4 { --accent: #F59E0B; --accent-glow: rgba(245, 158, 11, 0.2); } 
+        body.theme-5 { --accent: #14B8A6; --accent-glow: rgba(20, 184, 166, 0.2); } 
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
@@ -98,7 +98,7 @@
             display: inline-flex; align-items: center; justify-content: center; direction: ltr;
         }
 
-        /* --- Controls (Timer Box Left, Eye Icon Right) --- */
+        /* --- Controls --- */
         .time-controls { 
             position: absolute; top: 20px; left: 20px; display: flex; align-items: center; gap: 8px; z-index: 20; 
             direction: ltr; 
@@ -123,7 +123,7 @@
         
         .eye-care-controls { position: absolute; top: 20px; right: 20px; display: flex; gap: 8px; z-index: 20;}
 
-        /* --- Cheers (Professional Alignment) --- */
+        /* --- Cheers --- */
         .cheer-wrapper { position: fixed; top: -120px; right: 20px; z-index: 99999; pointer-events: none; transition: top 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
         .cheer-wrapper.show { top: 20px; }
         .cheer-bubble {
@@ -156,7 +156,6 @@
         .welcome-card h3 { font-size: 26px; font-weight: 900; color: var(--accent); margin-bottom: 15px;}
         .welcome-card p { font-size: 16px; color: var(--text-muted); line-height: 1.8; font-weight: 700;}
 
-        /* Time Attack Button */
         #time-attack-btn {
             background: #FEF2F2; color: var(--error-color); border: 2px dashed rgba(239,68,68,0.3);
             padding: 16px; border-radius: 14px; cursor: pointer; margin-bottom: 25px; font-weight: 800; font-size: 16px; width: 100%; transition: 0.3s;
@@ -265,7 +264,6 @@
         #result-screen { display: none; direction: rtl; }
         .score-card { background: #FFFFFF; border-radius: 24px; padding: 50px 25px; text-align: center; margin-bottom: 40px; border: 1px solid #E2E8F0; box-shadow: 0 20px 50px rgba(0,0,0,0.05); position: relative;}
         
-        /* 🏆 Giant LTR Score Circle */
         .score-circle {
             width: 240px; height: 240px; border-radius: 50%; margin: 0 auto 30px; 
             display: flex; align-items: center; justify-content: center;
@@ -276,7 +274,6 @@
         }
         #score-percent-text { font-family: 'Outfit', 'Cairo'; font-size: 24px; font-weight: 900; color: var(--accent); margin-bottom: 8px; letter-spacing: 1px;}
         
-        /* Result Student Display */
         #student-display-name { font-size: 28px; font-weight: 900; color: var(--text-main); margin-bottom: 20px; display: flex; align-items: center; justify-content: center; gap: 15px;}
         .result-avatar { 
             font-size: 35px; background: #F8FAFC; border: 3px solid var(--accent); box-shadow: 0 5px 20px var(--accent-glow);
@@ -316,7 +313,6 @@
         .cheat-content h1 { color: var(--error-color); font-size: 32px; margin-bottom: 20px; font-weight: 900;}
         .cheat-content p { color: var(--text-main); font-size: 18px; line-height: 1.8; font-weight: 700; margin-bottom: 30px;}
 
-        /* --- PDF Print Styles --- */
         @media print {
             * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; box-shadow: none !important;}
             body { background: #fff !important; color: #000 !important; }
@@ -449,8 +445,8 @@
     <div class="content-body">
         <div id="start-screen">
             <div class="welcome-card">
-                <h3>🌟 تحدي الـ 79 سؤال الشامل!</h3>
-                <p>أنت الآن أمام التقييم النهائي والأضخم. الأسئلة صُممت لتقيس قدرتك على ربط المعاني واستيعاب التفاصيل بدقة. ثق في قدراتك، واقرأ كل كلمة بتمعن. نحن بانتظارك في القمة!<br><br>هل أنت مستعد للبدء؟</p>
+                <h3>🌟 تحدي الـ 66 سؤال الشامل (الجزء الثاني)!</h3>
+                <p>مرحباً بك في المحطة الختامية! هذه هي فرصتك الأخيرة لإثبات مدى إتقانك للقواعد بدون أي تنازلات. ثق في قدراتك، واقرأ كل كلمة بتمعن. نحن بانتظارك في القمة!<br><br>هل أنت مستعد للبدء؟</p>
             </div>
 
             <button type="button" id="time-attack-btn" onclick="toggleTimeAttack()">⏳ وضع التحدي السريع (15ث للسؤال): متوقف</button>
@@ -475,7 +471,7 @@
                     <div class="hud-student">
                         <div class="avatar-ring" id="hud-avatar">🌟</div> <span id="hud-name">--</span>
                     </div>
-                    <div class="hud-counter" id="progress-count">Q: 1 / 79</div>
+                    <div class="hud-counter" id="progress-count">Q: 1 / 66</div>
                 </div>
                 <div class="hud-bar-container">
                     <div class="hud-bar-fill" id="energy-bar">
@@ -648,95 +644,77 @@ function changeFontSize(change) {
 }
 
 const rawData = [
-    // --- Code 1 Questions ---
-    { rule: "Present Perfect", q: "I ______ English recently.", options: ["have studied", "have been studied", "studied", "was studied"], answer: 0, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'recently' indicates Present Perfect. Active voice.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> الجملة معلومة وفيها recently (مضارع تام).</div>" },
-    { rule: "Present Perfect Passive", q: "English ______ recently.", options: ["have studied", "has been studied", "studied", "has studied"], answer: 1, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Passive voice (English is studied).</div><div class='exp-ar'>✨ <b>الخلاصة:</b> الجملة هنا مبنية للمجهول.</div>" },
-    { rule: "Has gone to", q: "She is not at home. She ______ to visit some friends.", options: ["has been", "will go", "has been going", "has gone"], answer: 3, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'has gone to' means went and hasn't returned yet.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> (ذهبت ولم تعد بعد) فبنستخدم has gone to.</div>" },
-    { rule: "Since", q: "It's a long time ______ I last saw her.", options: ["since", "when", "for", "ago"], answer: 0, exp: "<div class='exp-en'>💡 <b>Explanation:</b> It is + time duration + since + Past Simple.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> القاعدة الثابتة: It is + مدة زمنية + since + ماضي بسيط.</div>" },
-    { rule: "Ever", q: "My family haven't ______ been to London before. That is our first time.", options: ["already", "never", "yet", "ever"], answer: 3, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Sentence is already negative. We use 'ever' in negative forms.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> الجملة منفية بـ (haven't) فبنستخدم ever.</div>" },
-    { rule: "Passive Result", q: "He is furious because he ______ included in the team.", options: ["hadn't been", "hasn't been", "has", "had"], answer: 1, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Present effect (is furious), Present Perfect Passive.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> الأثر مضارع، والجملة مجهول.</div>" },
-    { rule: "Stative Have", q: "Hisham ______ this car for five years.", options: ["has been having", "has had", "has", "had had"], answer: 1, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'have' (own) is stative, no continuous.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> الفعل يمتلك (have) مينفعش يتحطله ing.</div>" },
-    { rule: "Result", q: "The students ______ well for this event so it is getting everyone's admiration.", options: ["has prepared", "had been preparing", "have been preparing", "have prepared"], answer: 3, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Past action with a present result. 'students' takes 'have'.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> حدث تم وله أثر في الحاضر. الجمع بياخد have + P.P.</div>" },
-    { rule: "Since Clause", q: "She ______ any meetings since she came here.", options: ["wasn't attending", "doesn't attend", "won't attend", "hasn't attended"], answer: 3, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'since' connects Present Perfect with Past Simple.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> رابط (since) يسبقه مضارع تام.</div>" },
-    { rule: "Has gone to", q: "She ______ to the market. She will be here soon.", options: ["has been", "has gone", "was going", "had been"], answer: 1, exp: "<div class='exp-en'>💡 <b>Explanation:</b> hasn't returned yet = has gone to.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> (ذهبت ولم تعد) فبنختار has gone to.</div>" },
-    { rule: "Time Clause", q: "Ramy won't go home until Ali ______.", options: ["has arrived", "arrived", "arrive", "had arrived"], answer: 0, exp: "<div class='exp-en'>💡 <b>Explanation:</b> After time conjunctions referring to the future, we use Present Simple/Perfect.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> الروابط الزمنية لو قبلها مستقبل، بيجي بعدها مضارع تام أو بسيط.</div>" },
-    { rule: "Quantity", q: "I ______ two emails till now. There are still four unsent.", options: ["sent", "send", "have sent", "am sending"], answer: 2, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'till now' + quantity = Simple Perfect.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> ذكر الكمية يمنع المستمر، و till now من كلمات التام.</div>" },
-    { rule: "Since Point", q: "Shehab has lived in London ______ his childhood.", options: ["since", "ago", "for", "when"], answer: 0, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'childhood' is a specific starting point in the past.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> الطفولة تعبر عن بداية الحدث فبتاخد since.</div>" },
-    { rule: "Result", q: "I am so happy; I ______ a medal for writing poetry.", options: ["was winning", "won", "had won", "have won"], answer: 3, exp: "<div class='exp-en'>💡 <b>Explanation:</b> A past action with a clear present result.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> حدث في الماضي وله أثر قوي في الحاضر.</div>" },
-    { rule: "So far", q: "Everything is going well. We ______ any problems so far.", options: ["didn't have", "don't have", "haven't had", "hadn't had"], answer: 2, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'so far' is a keyword for Present Perfect.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> كلمة so far بتدل على المضارع التام.</div>" },
-    { rule: "It is", q: "It ______ a year since I met Seif.", options: ["has", "was", "is", "had been"], answer: 2, exp: "<div class='exp-en'>💡 <b>Explanation:</b> The rule is 'It is + time + since + Past Simple'.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> تركيبة ثابتة: It is + مدة + since.</div>" },
-    { rule: "Since Clause", q: "It's been 2 weeks since I last ______ Sara.", options: ["phoned", "phone", "have phoned", "had phoned"], answer: 0, exp: "<div class='exp-en'>💡 <b>Explanation:</b> After 'since' in this structure, we use Past Simple.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> بعد since في التركيبة دي بييجي دايماً ماضي بسيط.</div>" },
-    { rule: "Since Clause", q: "Ahmed ______ a lot of health problems since he started living in that polluted city.", options: ["has", "had", "has had", "having"], answer: 2, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'since' + Past Simple is preceded by Present Perfect.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> since يسبقها مضارع تام.</div>" },
-    { rule: "Yet", q: "Have you eaten your meal ______? - No, I am still eating.", options: ["already", "just", "yet", "since"], answer: 2, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'yet' is used at the end of normal questions.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> سؤال استفساري عادي.</div>" },
-    { rule: "Already", q: "I can't believe it! Have you got the full marks ______?", options: ["already", "just", "ever", "since"], answer: 0, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'already' in questions expresses surprise.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> سؤال للدهشة والاستغراب.</div>" },
-    { rule: "Been to", q: "Ali ______ school. He has just arrived home.", options: ["has been to", "has been in", "has gone to", "has been"], answer: 0, exp: "<div class='exp-en'>💡 <b>Explanation:</b> He arrived home, meaning he went and returned.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> ذهب وعاد = has been to.</div>" },
-    { rule: "Been in", q: "Have you ______ Luxor since you were born? - Of course, I've always lived here.", options: ["gone in", "gone to", "been in", "been to"], answer: 2, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'been in' means staying or residing in a place.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> بيسأل عن الإقامة والاستقرار بنستخدم been in.</div>" },
-    { rule: "Continuous", q: "My hands are dirty because I ______ in the garden.", options: ["had worked", "have been working", "worked", "have been worked"], answer: 1, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Present effect points to Present Perfect Continuous.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> أثر واضح (إيدي متسخة من الشغل المستمر).</div>" },
-    { rule: "Never", q: "I ______ watched this film before.", options: ["haven't never", "have ever", "have never", "has never"], answer: 2, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'never' implies 'not ever' and gives negative meaning.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> never تنفي الجملة.</div>" },
-
-    // --- Code 2 Questions ---
-    { rule: "Until", q: "I ______ take my certificate until I have passed the oral test.", options: ["don't", "didn't", "wouldn't", "won't"], answer: 3, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Future simple negative (won't) matches 'until' + Present Perfect.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> الرابط until لو بعده مضارع تام يسبقه مستقبل غالباً منفي.</div>" },
-    { rule: "Since Point", q: "I haven't seen Amr ______ the last conference.", options: ["since", "just", "for", "yet"], answer: 0, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'the last conference' is a specific point in time.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> (the last + اسم) تعتبر نقطة بداية حدث فتاخد since.</div>" },
-    { rule: "Meaning", q: "Which sentence tells us that Tom is still working in the factory?", options: ["Tom worked in that factory for ten years.", "Tom used to work in that factory.", "Tom has worked in that factory for ten years.", "Tom was working in that factory."], answer: 2, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Present Perfect (has worked) implies the action is connected to the present.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> المضارع التام (has worked) يعبر عن حدث مازال مستمراً.</div>" },
-    { rule: "Time Clause", q: "After Yosra ______ her degree, she will get a job as a surgeon.", options: ["finished", "was finishing", "has finished", "had finished"], answer: 2, exp: "<div class='exp-en'>💡 <b>Explanation:</b> After + Present Simple/Perfect -> Future.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> الروابط الزمنية لو الجملة التانية مستقبل، الجملة الأولى مضارع بسيط أو تام.</div>" },
-    { rule: "Superlative", q: "This is the most interesting novel I ______ .", options: ["have never read", "have ever read", "had never read", "was reading"], answer: 1, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Superlative is followed by Present Perfect + 'ever'.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> صيغة التفضيل بييجي معاها مضارع تام وفيه ever.</div>" },
-    { rule: "Passive", q: "One of his friends ______ in the accident.", options: ["has injured", "injured", "has been injured", "had injured"], answer: 2, exp: "<div class='exp-en'>💡 <b>Explanation:</b> The friend was injured by something (Passive Voice).</div><div class='exp-ar'>✨ <b>الخلاصة:</b> الصديق أُصيب (مبني للمجهول).</div>" },
-    { rule: "Been to", q: "Sorry for being late for the meeting, Sir. Please, let me in. I ______ the clinic.", options: ["had been to", "have been in", "have gone to", "have been to"], answer: 3, exp: "<div class='exp-en'>💡 <b>Explanation:</b> He went to the clinic and has returned.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> كان في العيادة ورجع (يعني ذهب وعاد).</div>" },
-    { rule: "Result", q: "Finally, my mother ______ how to use the internet. Now she can send e-mails.", options: ["learns", "has learnt", "had learnt", "was learning"], answer: 1, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Action happened in the past with a present result.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> حدث تم وله نتيجة في الحاضر.</div>" },
-    { rule: "Passive", q: "Everybody ______ a chance to talk in the conference.", options: ["have been given", "were given", "has been given", "has given"], answer: 2, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'Everybody' is singular. Passive voice.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> كلمة (Everybody) مفرد، والجملة مجهول.</div>" },
-    { rule: "Until", q: "We won't be able to live on Mars until we ______ enough water there.", options: ["will find", "have found", "will be finding", "found"], answer: 1, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Future (won't) + until + Present Simple/Perfect.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> الرابط (until) قبله مستقبل، إذن بعده مضارع بسيط أو تام.</div>" },
-    { rule: "Living Experience", q: "Many of today's great writers ______ as teachers.", options: ["have also worked", "had also worked", "also works", "are also working"], answer: 0, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Refers to experiences of living people up to the present.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> خبرات أشخاص أحياء تأخذ مضارع تام.</div>" },
-    { rule: "Ever/Never", q: "Nothing like this has ______ happened to me.", options: ["up till now", "never", "ever", "recently"], answer: 2, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'Nothing' makes the sentence negative, so use 'ever'.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> الجملة منفية بـ Nothing فنستخدم ever.</div>" },
-    { rule: "For", q: "Sally has been working here ______ .", options: ["for six months", "since six months", "six months ago", "by six months"], answer: 0, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'six months' is a duration, use 'for'.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> مدة زمنية فتاخد for.</div>" },
-    { rule: "Been to", q: "Although he ______ to France twice this year, he's going again next week.", options: ["goes", "has gone", "has been", "will have gone"], answer: 2, exp: "<div class='exp-en'>💡 <b>Explanation:</b> He went and returned (because he is going again).</div><div class='exp-ar'>✨ <b>الخلاصة:</b> هيروح تاني، معناه إنه راح ورجع.</div>" },
-    { rule: "Since", q: "Have you eaten anything ______ this morning?", options: ["for", "ago", "by", "since"], answer: 3, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'this morning' is a specific starting point in time.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> نقطة زمنية محددة فتاخد since.</div>" },
-    { rule: "It is", q: "It's two years ______ Joe.", options: ["that I don't see", "that I haven't seen", "since I didn't see", "since I last saw"], answer: 3, exp: "<div class='exp-en'>💡 <b>Explanation:</b> It is + time duration + since + Past Simple.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> تركيبة ثابتة.</div>" },
-    { rule: "Quantity", q: "Ahmed ______ typing three reports.", options: ["has finished", "has been finished", "has been finishing", "had been finished"], answer: 0, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Completed quantity (three reports) requires Present Perfect Simple.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> ذكر الكمية يمنع استخدام المستمر.</div>" },
-    { rule: "Since when", q: "______ when have you lived in your home?", options: ["How long", "Recently", "Since", "For"], answer: 2, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'Since when' asks about the starting point.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> للسؤال عن نقطة البداية.</div>" },
-    { rule: "For how long", q: "______ how long have you been studying English?", options: ["For", "Since", "So far", "Recently"], answer: 0, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'For how long' asks about duration.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> للسؤال عن طول المدة.</div>" },
-    { rule: "Already", q: "Have you eaten all the food ______? - You must have been very hungry.", options: ["yet", "since", "recently", "already"], answer: 3, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Used in questions to express surprise.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> سؤال تعجب ودهشة.</div>" },
-    { rule: "Since", q: "______ the death of her father, I have never seen her smiling.", options: ["So far", "For", "Since", "When"], answer: 2, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'the death' is a specific starting event.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> نقطة بداية فنستخدم since.</div>" },
-    { rule: "For", q: "Mai has been ill ______ the last week.", options: ["for", "since", "already", "recently"], answer: 0, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'the last week' is a duration (takes 'for').</div><div class='exp-ar'>✨ <b>الخلاصة:</b> وجود the قبل last week يخليها مدة.</div>" },
-    { rule: "Since Clause", q: "My phone ______ very well since I dropped it last week.", options: ["hadn't worked", "hasn't worked", "wasn't worked", "isn't working"], answer: 1, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'since' + Past Simple is preceded by Present Perfect.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> رابط since يسبقه مضارع تام.</div>" },
-    { rule: "Meaning", q: "The last time I saw her was a week ago. This means ______", options: ["I haven't seen her for a week.", "I have seen her for a week.", "I haven't seen her since a week.", "a & b are correct."], answer: 0, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'last time... a week ago' = 'haven't seen... for a week'.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> آخر مرة شفتها من أسبوع = مشفتهاش بقالي أسبوع.</div>" },
-    { rule: "Passive Yet", q: "His new novel ______ yet.", options: ["has published", "hasn't published", "hasn't been published", "has been published"], answer: 2, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Passive voice + negative (yet).</div><div class='exp-ar'>✨ <b>الخلاصة:</b> الرواية تُنشر (مجهول)، منفية بـ yet.</div>" },
-    { rule: "Meaning", q: "He hasn't played tennis since he was in the club last week. This means that ______", options: ["he last played tennis in the club a week ago", "he didn't play tennis last week", "he hasn't played tennis before", "he is still playing tennis in the club"], answer: 0, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Hasn't played since last week = last played a week ago.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> ملعبش من الأسبوع اللي فات = آخر مرة لعب كانت من أسبوع.</div>" },
-    { rule: "Structure", q: "Which of the following is structurally correct?", options: ["I haven't met Mai since I call you.", "I didn't met Mai since I called you.", "I haven't met Mai for I called you.", "I haven't met Mai since I called you."], answer: 3, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Present Perfect + since + Past Simple.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> مضارع تام + since + ماضي بسيط.</div>" },
-    { rule: "Correction", q: "'I am here since 2020.' Which of the following corrects the mistake in this sentence?", options: ["here -> there", "since -> for", "am -> have been", "since 2020 -> in 2020"], answer: 2, exp: "<div class='exp-en'>💡 <b>Explanation:</b> With 'since 2020', we need Present Perfect.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> منذ 2020 تتطلب مضارع تام.</div>" },
-
-    // --- Code 3 Questions ---
-    { rule: "Passive Continuous", q: "Staff have ______ new skills to meet the new challenges of development.", options: ["be given", "been giving", "been given", "given"], answer: 2, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Passive Present Perfect. The staff receive the skills.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> مبني للمجهول في المضارع التام.</div>" },
-    { rule: "State vs Action", q: "Where ______ ? We've ______ for you for half an hour.", options: ["you have been being / been waiting", "you have been / waited", "have you been / been waiting", "have you been being / been waiting"], answer: 2, exp: "<div class='exp-en'>💡 <b>Explanation:</b> First asks about state. Second emphasizes continuous duration.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> سؤال عن حالة، يليه حدث استمر لمدة نصف ساعة.</div>" },
-    { rule: "Continuous vs Simple", q: "We've ______ about learning Spanish for a while, but we ______ a good course yet.", options: ["thought / haven't found", "thought / haven't been finding", "been thinking / haven't been finding", "been thinking / haven't found"], answer: 3, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Thinking is continuous. Finding is a completed result with 'yet'.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> التفكير استمر، أما الإيجاد لم يكتمل بعد.</div>" },
-    { rule: "Continuous vs Simple", q: "Heba ______ the housework for three hours, but she ______ yet.", options: ["has done / hasn't finished", "has been done / hasn't finished", "has been doing / hasn't been finishing", "has been doing / hasn't finished"], answer: 3, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Continuous duration vs incomplete state.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> الحدث الأول استمر، والثاني نتيجته لم تكتمل.</div>" },
-    { rule: "Completed Action", q: "Aya ______ all her exams and is going to start university next month.", options: ["has passed", "has been passing", "passes", "will be passing"], answer: 0, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Completed action with a present result.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> حدث اكتمل وله نتيجة.</div>" },
-    { rule: "Continuous Pattern", q: "Ali broke his leg and has to stay in bed, so he ______ a lot of films recently!", options: ["is watching", "has been watching", "was watching", "will be watching"], answer: 1, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Action happening repeatedly over a recent period.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> حدث يتكرر ويستمر في الفترة الأخيرة.</div>" },
-    { rule: "Just", q: "My pen friend arrived at Cairo Airport a moment ago. This means that he ______ .", options: ["has just arrived", "just has arrived", "hasn't arrived", "will arrive"], answer: 0, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'a moment ago' equals 'has just + PP'.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> وصل منذ لحظة = لقد وصل للتو.</div>" },
-    { rule: "Quantity", q: "I ______ a large number of research studies on this topic. I know much.", options: ["has read", "have been reading", "have been read", "have read"], answer: 3, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Mentioning quantity means Simple Perfect.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> ذكر الكمية يمنع استخدام المستمر.</div>" },
-    { rule: "Passive Since", q: "The film ______ by many millions of people since it was made in 1968.", options: ["has watched", "has been watching", "has been watched", "had been watched"], answer: 2, exp: "<div class='exp-en'>💡 <b>Explanation:</b> The subject is passive.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> الفيلم (تُم مشاهدته) مبني للمجهول.</div>" },
-    { rule: "Continuous", q: "Researchers ______ at what makes people successful for a very long time.", options: ["have been looking", "has been looking", "have been looked", "have looking"], answer: 0, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Plural subject + continuous duration.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> الباحثون + مدة مستمرة.</div>" },
-    { rule: "Stative Have", q: "I ______ very much time to work on this project lately.", options: ["haven't been", "haven't been having", "haven't been had", "haven't had"], answer: 3, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'have' indicating possession is stative.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> الفعل have لا يوضع في الاستمرار.</div>" },
-    { rule: "Completed Action", q: "My bike is OK again now. I ______ it.", options: ["have been repaired", "have repaired", "have been repairing", "had repaired"], answer: 1, exp: "<div class='exp-en'>💡 <b>Explanation:</b> The result means the repair action is completed.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> عملية التصليح اكتملت وانتهت.</div>" },
-    { rule: "Experience", q: "I have ______ playing the drums as much as I do at the moment.", options: ["enjoyed never", "never been enjoyed", "been never enjoying", "never enjoyed"], answer: 3, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Focuses on an experience up to now. Adverb 'never' precedes verb.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> يعبر عن تجربة شعورية.</div>" },
-    { rule: "Continuous Habit", q: "Ali ______ too much recently. He should eat less.", options: ["has eaten", "had been eating", "has been eating", "has been eaten"], answer: 2, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Focuses on the recent ongoing habit causing a problem.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> عادة مستمرة مؤخراً أدت لنتيجة سلبية.</div>" },
-    { rule: "Never", q: "I ______ such a beautiful sunset.", options: ["have never see", "have never seen", "have ever seen", "have never been seen"], answer: 1, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Expressing a life experience negatively.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> التعبير عن عدم حدوث تجربة.</div>" },
-    { rule: "Continuous Result", q: "My hands are very dirty. I ______ my bike.", options: ["had been repaired", "have repaired", "have been repaired", "have been repairing"], answer: 3, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Present visible evidence of a recent continuous action.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> أثر مرئي في المضارع لحدث استغرق وقتاً.</div>" },
-    { rule: "Completed Action", q: "Somebody ______ all the chocolates. The box is empty.", options: ["has eaten", "have eaten", "has been eating", "have been eating"], answer: 0, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'Somebody' is singular. Action is completed.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> حدث اكتمل والدليل فراغ العلبة.</div>" },
-    { rule: "Since Point", q: "I haven't seen her ______ five years ago.", options: ["just", "already", "since", "for"], answer: 2, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'since' + time + 'ago' creates a specific point.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> التركيبة تعتبر نقطة بداية محددة.</div>" },
-    { rule: "Continuous Result", q: "He's out of breath because he ______ .", options: ["was running", "had run", "has run", "has been running"], answer: 3, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Present physical result of a recent continuous activity.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> أثر بدني واضح لحدث استمر وانتهى للتو.</div>" },
-    { rule: "Continuous Meaning", q: "Ali has been living here since he was a child. This means ______ .", options: ["Ali no longer lives here", "Ali lived here", "Ali lives here now", "Ali is a child"], answer: 2, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Action continues into the present.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> الحدث لسه مستمر.</div>" },
-    { rule: "Been to", q: "Ali ______ school. He has just arrived home.", options: ["has been to", "has been in", "has gone to", "has been"], answer: 0, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'has been to' means he went and came back.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> ذهب وعاد = has been to.</div>" },
-    { rule: "Before", q: "I haven't met the General Manager ______ . It's my first time to meet him.", options: ["lately", "never", "already", "before"], answer: 3, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'before' is used at the end of a negative sentence.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> تأتي كلمة before في نهاية الجملة المنفية.</div>" },
-    { rule: "Passive", q: "Our block of flats ______ since last week.", options: ["have repainted", "has been repainted", "has repainted", "have been repainted"], answer: 1, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Singular subject. Passive voice.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> المبنى مفرد ويتم طلاؤه (مجهول).</div>" },
-    { rule: "Now in Reported", q: "Tamer said that he ______ English for four hours now.", options: ["has been studying", "was studying", "is studying", "had been studying"], answer: 0, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'now' emphasizes the duration up to the present.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> وجود now يؤكد استمرار الحدث.</div>" },
-    { rule: "Since & States", q: "They started living here in 2015. This means ______ .", options: ["They have started live here since 2015", "They haven't lived here since 2015", "They have started living here since 2015", "They have lived here since 2015"], answer: 3, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Use the main verb (live) with since.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> نستخدم الفعل الأساسي (live) في المضارع التام.</div>" },
-    { rule: "Been to", q: "They have been to Luxor. This means ______ .", options: ["They are in Luxor.", "They aren't in Luxor now.", "They will go to Luxor someday.", "They have gone to Luxor."], answer: 1, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'have been to' means they went and returned.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> راحوا ورجعوا، يعني مش هناك دلوقتي.</div>" },
-    { rule: "Stative Belong", q: "We ______ to the tennis club since we moved here.", options: ["have belonged", "have been belonging", "had belonged", "belonged"], answer: 0, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'belong' is a stative verb.</div><div class='exp-ar'>✨ <b>الخلاصة:</b> الفعل belong من أفعال الثبات.</div>" }
+    { rule: "Present Perfect Active", q: "I ______ English recently.", options: ["have studied", "have been studied", "studied", "was studied"], answer: 0, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'recently' indicates Present Perfect. Active voice (I did the action).</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> الجملة معلومة وفيها recently، فنختار have + P.P.</div>" },
+    { rule: "Present Perfect Passive", q: "English ______ recently.", options: ["have studied", "has been studied", "studied", "has studied"], answer: 1, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Passive voice (English is studied).</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> الجملة مبنية للمجهول، فبنستخدم has been + P.P.</div>" },
+    { rule: "Has gone to", q: "She is not at home. She ______ to visit some friends.", options: ["has been", "will go", "has been going", "has gone"], answer: 3, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'has gone to' means went and hasn't returned yet.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> هي مش في البيت، يعني (ذهبت ولم تعد بعد) فبنستخدم has gone.</div>" },
+    { rule: "It is + time + since", q: "It's a long time ______ I last saw her.", options: ["since", "when", "for", "ago"], answer: 0, exp: "<div class='exp-en'>💡 <b>Explanation:</b> The rule is: It is + time duration + since + Past Simple.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> القاعدة: It is + مدة + since.</div>" },
+    { rule: "Ever in negative", q: "My family haven't ______ been to London before. That is our first time.", options: ["already", "never", "yet", "ever"], answer: 3, exp: "<div class='exp-en'>💡 <b>Explanation:</b> We use 'ever' in negative forms for experiences.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> الجملة منفية بـ (haven't) فبنستخدم ever.</div>" },
+    { rule: "Present Perfect Passive", q: "He is furious because he ______ included in the team.", options: ["hadn't been", "hasn't been", "has", "had"], answer: 1, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Present effect (is furious), so we need Present Perfect Passive.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> الأثر مضارع، والجملة مجهول.</div>" },
+    { rule: "Stative verb", q: "Hisham ______ this car for five years.", options: ["has been having", "has had", "has", "had had"], answer: 1, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'have' (own) is stative.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> الفعل يمتلك (have) مينفعش يتحطله ing.</div>" },
+    { rule: "Present Result", q: "The students ______ well for this event so it is getting everyone's admiration.", options: ["has prepared", "had been preparing", "have been preparing", "have prepared"], answer: 3, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Past action with a present result. Plural subject.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> حدث تم وله أثر. الجمع بياخد have + P.P.</div>" },
+    { rule: "Since clause", q: "She ______ any meetings since she came here.", options: ["wasn't attending", "doesn't attend", "won't attend", "hasn't attended"], answer: 3, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'since' connects Present Perfect with Past Simple.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> رابط (since) يسبقه مضارع تام.</div>" },
+    { rule: "Has gone to", q: "She ______ to the market. She will be here soon.", options: ["has been", "has gone", "was going", "had been"], answer: 1, exp: "<div class='exp-en'>💡 <b>Explanation:</b> hasn't returned yet. Use 'has gone to'.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> لسه هترجع، يعني (ذهبت ولم تعد).</div>" },
+    { rule: "Future Time Clause", q: "Ramy won't go home until Ali ______.", options: ["has arrived", "arrived", "arrive", "had arrived"], answer: 0, exp: "<div class='exp-en'>💡 <b>Explanation:</b> After time conjunctions referring to the future, we use Present Simple/Perfect.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> الروابط الزمنية لو قبلها مستقبل، بيجي بعدها مضارع تام.</div>" },
+    { rule: "Quantity", q: "I ______ two emails till now. There are still four unsent.", options: ["sent", "send", "have sent", "am sending"], answer: 2, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'till now' + quantity = Simple Perfect.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> كلمة till now وتحديد الكمية يمنع المستمر.</div>" },
+    { rule: "Since Point", q: "Shehab has lived in London ______ his childhood.", options: ["since", "ago", "for", "when"], answer: 0, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'childhood' is a specific starting point.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> الطفولة بتعبر عن بداية الحدث.</div>" },
+    { rule: "Present Result", q: "I am so happy; I ______ a medal for writing poetry.", options: ["was winning", "won", "had won", "have won"], answer: 3, exp: "<div class='exp-en'>💡 <b>Explanation:</b> A past action with a clear present result.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> حدث وله أثر قوي في الحاضر.</div>" },
+    { rule: "So far", q: "Everything is going well. We ______ any problems so far.", options: ["didn't have", "don't have", "haven't had", "hadn't had"], answer: 2, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'so far' is a keyword for Present Perfect.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> كلمة so far بتدل على المضارع التام.</div>" },
+    { rule: "It is + time", q: "It ______ a year since I met Seif.", options: ["has", "was", "is", "had been"], answer: 2, exp: "<div class='exp-en'>💡 <b>Explanation:</b> The rule is 'It is + time + since + Past Simple'.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> تركيبة ثابتة: It is + مدة + since.</div>" },
+    { rule: "Since Past Simple", q: "It's been 2 weeks since I last ______ Sara.", options: ["phoned", "phone", "have phoned", "had phoned"], answer: 0, exp: "<div class='exp-en'>💡 <b>Explanation:</b> After 'since' in this structure, we use Past Simple.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> بعد since بييجي ماضي بسيط.</div>" },
+    { rule: "Since Clause", q: "Ahmed ______ a lot of health problems since he started living in that polluted city.", options: ["has", "had", "has had", "having"], answer: 2, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'since' + Past Simple is preceded by Present Perfect.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> since يسبقها مضارع تام.</div>" },
+    { rule: "Yet", q: "Have you eaten your meal ______? - No, I am still eating.", options: ["already", "just", "yet", "since"], answer: 2, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'yet' is used at the end of normal questions.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> سؤال استفساري عادي.</div>" },
+    { rule: "Already", q: "I can't believe it! Have you got the full marks ______?", options: ["already", "just", "ever", "since"], answer: 0, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'already' in questions expresses surprise.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> سؤال للدهشة والاستغراب.</div>" },
+    { rule: "Been to", q: "Ali ______ school. He has just arrived home.", options: ["has been to", "has been in", "has gone to", "has been"], answer: 0, exp: "<div class='exp-en'>💡 <b>Explanation:</b> He arrived home, meaning he went and returned.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> هو وصل البيت (ذهب وعاد).</div>" },
+    { rule: "Been in", q: "Have you ______ Luxor since you were born? - Of course, I've always lived here.", options: ["gone in", "gone to", "been in", "been to"], answer: 2, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'been in' means staying or residing in a place.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> بيسأل عن الإقامة والاستقرار.</div>" },
+    { rule: "Continuous Result", q: "My hands are dirty because I ______ in the garden.", options: ["had worked", "have been working", "worked", "have been worked"], answer: 1, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Present effect points to Present Perfect Continuous.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> أثر واضح لحدث مستمر.</div>" },
+    { rule: "Never", q: "I ______ watched this film before.", options: ["haven't never", "have ever", "have never", "has never"], answer: 2, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'never' implies 'not ever' and gives negative meaning.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> never تنفي الجملة.</div>" },
+    { rule: "Until", q: "I ______ take my certificate until I have passed the oral test.", options: ["don't", "didn't", "wouldn't", "won't"], answer: 3, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Future simple negative matches 'until' + Present Perfect.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> الرابط until لو بعده مضارع يسبقه مستقبل منفي.</div>" },
+    { rule: "Since", q: "I haven't seen Amr ______ the last conference.", options: ["since", "just", "for", "yet"], answer: 0, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'the last conference' is a specific point in time.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> (the last + اسم حدث) نقطة بداية فتاخد since.</div>" },
+    { rule: "Present Perfect Meaning", q: "Which sentence tells us that Tom is still working in the factory?", options: ["Tom worked in that factory for ten years.", "Tom used to work in that factory.", "Tom has worked in that factory for ten years.", "Tom was working in that factory."], answer: 2, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Present Perfect implies the action is connected to the present.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> المضارع التام يعبر عن حدث مازال مستمراً.</div>" },
+    { rule: "Time Clause", q: "After Yosra ______ her degree, she will get a job as a surgeon.", options: ["finished", "was finishing", "has finished", "had finished"], answer: 2, exp: "<div class='exp-en'>💡 <b>Explanation:</b> After + Present Simple/Perfect -> Future.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> الروابط الزمنية لو الجملة التانية مستقبل، الأولى مضارع.</div>" },
+    { rule: "Superlative", q: "This is the most interesting novel I ______ .", options: ["have never read", "have ever read", "had never read", "was reading"], answer: 1, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Superlative is followed by Present Perfect + 'ever'.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> صيغة التفضيل بييجي معاها مضارع تام وفيه ever.</div>" },
+    { rule: "Passive", q: "One of his friends ______ in the accident.", options: ["has injured", "injured", "has been injured", "had injured"], answer: 2, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Passive Voice.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> الصديق أُصيب (مبني للمجهول).</div>" },
+    { rule: "Been to", q: "Sorry for being late for the meeting, Sir. Please, let me in. I ______ the clinic.", options: ["had been to", "have been in", "have gone to", "have been to"], answer: 3, exp: "<div class='exp-en'>💡 <b>Explanation:</b> He went to the clinic and has returned.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> كان في العيادة ورجع.</div>" },
+    { rule: "Result", q: "Finally, my mother ______ how to use the internet. Now she can send e-mails.", options: ["learns", "has learnt", "had learnt", "was learning"], answer: 1, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Action happened in the past with a present result.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> حدث تم وله نتيجة في الحاضر.</div>" },
+    { rule: "Passive", q: "Everybody ______ a chance to talk in the conference.", options: ["have been given", "were given", "has been given", "has given"], answer: 2, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'Everybody' is singular. Passive voice.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> كلمة (Everybody) تعامل معاملة المفرد، ومجهول.</div>" },
+    { rule: "Time Clause", q: "We won't be able to live on Mars until we ______ enough water there.", options: ["will find", "have found", "will be finding", "found"], answer: 1, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Future + until + Present Simple/Perfect.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> الرابط (until) قبله مستقبل وبعده مضارع.</div>" },
+    { rule: "Experience", q: "Many of today's great writers ______ as teachers.", options: ["have also worked", "had also worked", "also works", "are also working"], answer: 0, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Refers to experiences of living people.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> خبرات أشخاص ما زالوا أحياء.</div>" },
+    { rule: "Ever in Negative", q: "Nothing like this has ______ happened to me.", options: ["up till now", "never", "ever", "recently"], answer: 2, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'Nothing' makes the sentence negative, so use 'ever'.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> الجملة منفية بكلمة (Nothing).</div>" },
+    { rule: "For", q: "Sally has been working here ______ .", options: ["for six months", "since six months", "six months ago", "by six months"], answer: 0, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'six months' is a duration.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> ستة أشهر (مدة زمنية) فتاخد for.</div>" },
+    { rule: "Been to", q: "Although he ______ to France twice this year, he's going again next week.", options: ["goes", "has gone", "has been", "will have gone"], answer: 2, exp: "<div class='exp-en'>💡 <b>Explanation:</b> He went and returned.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> راح ورجع.</div>" },
+    { rule: "Since", q: "Have you eaten anything ______ this morning?", options: ["for", "ago", "by", "since"], answer: 3, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'this morning' is a specific starting point.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> نقطة زمنية محددة.</div>" },
+    { rule: "It is + Since", q: "It's two years ______ Joe.", options: ["that I don't see", "that I haven't seen", "since I didn't see", "since I last saw"], answer: 3, exp: "<div class='exp-en'>💡 <b>Explanation:</b> It is + time duration + since + Past Simple.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> تركيبة ثابتة.</div>" },
+    { rule: "Quantity", q: "Ahmed ______ typing three reports.", options: ["has finished", "has been finished", "has been finishing", "had been finished"], answer: 0, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Mentioning a completed quantity requires Simple Perfect.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> ذكر الكمية المنجزة يمنع المستمر.</div>" },
+    { rule: "Since when", q: "______ when have you lived in your home?", options: ["How long", "Recently", "Since", "For"], answer: 2, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'Since when' is used to ask about the starting point.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> للسؤال عن نقطة البداية.</div>" },
+    { rule: "For how long", q: "______ how long have you been studying English?", options: ["For", "Since", "So far", "Recently"], answer: 0, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'For how long' is used to ask about duration.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> للسؤال عن طول المدة.</div>" },
+    { rule: "Already", q: "Have you eaten all the food ______? - You must have been very hungry.", options: ["yet", "since", "recently", "already"], answer: 3, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Used in questions to express surprise.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> سؤال تعجب ودهشة.</div>" },
+    { rule: "Since Point", q: "______ the death of her father, I have never seen her smiling.", options: ["So far", "For", "Since", "When"], answer: 2, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'the death' is a specific starting event.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> حدث يمثل نقطة بداية.</div>" },
+    { rule: "For vs Since trap", q: "Mai has been ill ______ the last week.", options: ["for", "since", "already", "recently"], answer: 0, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'the last week' is a duration (takes 'for').</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> وجود (the) قبل last week يخليها مدة زمنية.</div>" },
+    { rule: "Since Clause", q: "My phone ______ very well since I dropped it last week.", options: ["hadn't worked", "hasn't worked", "wasn't worked", "isn't working"], answer: 1, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'since' + Past Simple is preceded by Present Perfect.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> رابط since يسبقه مضارع تام.</div>" },
+    { rule: "Meaning", q: "The last time I saw her was a week ago. This means ______", options: ["I haven't seen her for a week.", "I have seen her for a week.", "I haven't seen her since a week.", "a & b are correct."], answer: 0, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'last time... a week ago' = 'haven't seen... for a week'.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> مشفتهاش بقالي أسبوع.</div>" },
+    { rule: "Passive Yet", q: "His new novel ______ yet.", options: ["has published", "hasn't published", "hasn't been published", "has been published"], answer: 2, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Passive voice + negative (yet).</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> الرواية تُنشر (مجهول)، والجملة منفية.</div>" },
+    { rule: "Meaning", q: "He hasn't played tennis since he was in the club last week. This means that ______", options: ["he last played tennis in the club a week ago", "he didn't play tennis last week", "he hasn't played tennis before", "he is still playing tennis in the club"], answer: 0, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Hasn't played since last week = The last time he played was a week ago.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> آخر مرة لعب كانت من أسبوع.</div>" },
+    { rule: "Structure", q: "Which of the following is structurally correct?", options: ["I haven't met Mai since I call you.", "I didn't met Mai since I called you.", "I haven't met Mai for I called you.", "I haven't met Mai since I called you."], answer: 3, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Present Perfect (haven't met) + since + Past Simple (called).</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> مضارع تام + since + ماضي بسيط.</div>" },
+    { rule: "Correction", q: "'I am here since 2020.' Which of the following corrects the mistake in this sentence?", options: ["here -> there", "since -> for", "am -> have been", "since 2020 -> in 2020"], answer: 2, exp: "<div class='exp-en'>💡 <b>Explanation:</b> With 'since 2020', we need Present Perfect.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> وجود since 2020 يتطلب استخدام مضارع تام (have been).</div>" },
+    { rule: "Passive Perfect", q: "Staff have ______ new skills to meet the new challenges of development.", options: ["be given", "been giving", "been given", "given"], answer: 2, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Passive Present Perfect. The staff receive the skills.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> مبني للمجهول في المضارع التام.</div>" },
+    { rule: "State vs Action", q: "Where ______ ? We've ______ for you for half an hour.", options: ["you have been being / been waiting", "you have been / waited", "have you been / been waiting", "have you been being / been waiting"], answer: 2, exp: "<div class='exp-en'>💡 <b>Explanation:</b> First asks about a state. Second emphasizes continuous duration.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> سؤال عن حالة، يليه حدث استمر لمدة نصف ساعة.</div>" },
+    { rule: "Continuous vs Simple", q: "We've ______ about learning Spanish for a while, but we ______ a good course yet.", options: ["thought / haven't found", "thought / haven't been finding", "been thinking / haven't been finding", "been thinking / haven't found"], answer: 3, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Thinking is continuous. Finding is a completed result with 'yet'.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> التفكير استمر (مستمر)، الإيجاد لم يكتمل (تام بسيط).</div>" },
+    { rule: "Continuous vs Simple", q: "Heba ______ the housework for three hours, but she ______ yet.", options: ["has done / hasn't finished", "has been done / hasn't finished", "has been doing / hasn't been finishing", "has been doing / hasn't finished"], answer: 3, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Continuous duration vs incomplete state.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> الحدث الأول استمر، والثاني نتيجته لم تكتمل.</div>" },
+    { rule: "Completed Action", q: "Aya ______ all her exams and is going to start university next month.", options: ["has passed", "has been passing", "passes", "will be passing"], answer: 0, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Completed action with a present result.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> حدث اكتمل وله نتيجة (ستدخل الجامعة).</div>" },
+    { rule: "Continuous Pattern", q: "Ali broke his leg and has to stay in bed, so he ______ a lot of films recently!", options: ["is watching", "has been watching", "was watching", "will be watching"], answer: 1, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Action happening repeatedly over a recent period.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> حدث يتكرر ويستمر في الفترة الأخيرة.</div>" },
+    { rule: "Just", q: "My pen friend arrived at Cairo Airport a moment ago. This means that he ______ .", options: ["has just arrived", "just has arrived", "hasn't arrived", "will arrive"], answer: 0, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'a moment ago' (Past Simple) equals 'has just + PP'.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> وصل منذ لحظة = لقد وصل للتو (has just arrived).</div>" },
+    { rule: "Quantity", q: "I ______ a large number of research studies on this topic. I know much.", options: ["has read", "have been reading", "have been read", "have read"], answer: 3, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Mentioning quantity means we must use Simple Perfect.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> ذكر الكمية يمنع استخدام المستمر.</div>" },
+    { rule: "Passive Since", q: "The film ______ by many millions of people since it was made in 1968.", options: ["has watched", "has been watching", "has been watched", "had been watched"], answer: 2, exp: "<div class='exp-en'>💡 <b>Explanation:</b> The subject 'film' is passive.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> الفيلم (تُم مشاهدته) مبني للمجهول.</div>" },
+    { rule: "Continuous Plural", q: "Researchers ______ at what makes people successful for a very long time.", options: ["have been looking", "has been looking", "have been looked", "have looking"], answer: 0, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Plural subject + continuous duration.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> الباحثون (جمع) + مدة مستمرة.</div>" },
+    { rule: "Stative Have", q: "I ______ very much time to work on this project lately.", options: ["haven't been", "haven't been having", "haven't been had", "haven't had"], answer: 3, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'have' indicating possession is a stative verb.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> الفعل have بمعنى (يمتلك وقت) لا يوضع في الاستمرار.</div>" },
+    { rule: "Completed Action", q: "My bike is OK again now. I ______ it.", options: ["have been repaired", "have repaired", "have been repairing", "had repaired"], answer: 1, exp: "<div class='exp-en'>💡 <b>Explanation:</b> The result (bike is OK) means the repair action is completed.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> عملية التصليح (اكتملت وانتهت). نستخدم تام بسيط.</div>" },
+    { rule: "Never Experience", q: "I have ______ playing the drums as much as I do at the moment.", options: ["enjoyed never", "never been enjoyed", "been never enjoying", "never enjoyed"], answer: 3, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Focuses on a state/experience up to now.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> يعبر عن تجربة شعورية، ومكان never بين have والتصريف الثالث.</div>" },
+    { rule: "Continuous Habit", q: "Ali ______ too much recently. He should eat less.", options: ["has eaten", "had been eating", "has been eating", "has been eaten"], answer: 2, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Focuses on the recent ongoing habit causing a problem now.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> عادة مستمرة مؤخراً أدت لنتيجة سلبية تتطلب نصيحة.</div>" }
 ];
 
 let quizData = [];
 let currentQuestion = 0, userAnswers = {}, studentName = "", selectedAvatar = '🌟';
-let totalSeconds = 4800, qTimeLeft = 15, timerInterval = null, isTimeAttack = false;
+let totalSeconds = 66 * 60, qTimeLeft = 15, timerInterval = null, isTimeAttack = false;
 let isSubmitting = false; 
 
 // 🛡️ Silent Anti-Cheat
@@ -788,7 +766,7 @@ function initQuizData() {
 }
 
 function updateChromaShift() {
-    let levelIndex = Math.floor(currentQuestion / 16); 
+    let levelIndex = Math.floor(currentQuestion / 14); 
     if(levelIndex > 4) levelIndex = 4;
     document.body.className = `theme-${levelIndex + 1}`;
 }
@@ -1014,13 +992,13 @@ function calculateScore() {
             } catch(e){}
             
             try {
-                let usedTime = isTimeAttack ? "Time Attack" : (4800 - totalSeconds) + " Seconds";
+                let usedTime = isTimeAttack ? "Time Attack" : (3960 - totalSeconds) + " Seconds";
                 let wrongAnswersText = wrongAnswersArray.length > 0 
                     ? wrongAnswersArray.join('') 
                     : "<p style='text-align:center; font-weight:bold; color:#10B981; font-size: 16px;'>Excellent! The student made zero mistakes. 🎉</p>";
 
                 sendReportToTeacher(
-                    "Luminous Nova Finale (79 Qs)",
+                    "Luminous Nova Finale (Part 2 - 66 Qs)",
                     studentName, 
                     `${score} / ${quizData.length}`, 
                     percent, 
@@ -1036,15 +1014,15 @@ function calculateScore() {
 }
 
 function shareToParentWhatsApp() {
-    let txt = `👨‍👩‍👧 تقرير أداء - التقييم الشامل الأكبر\n👤 الطالب: ${studentName}\n📊 النسبة: ${finalPercent}%\n✨ تحت إشراف مستر أيمن كامل.`;
+    let txt = `👨‍👩‍👧 تقرير أداء - التقييم الشامل الأكبر (الجزء الثاني)\n👤 الطالب: ${studentName}\n📊 النسبة: ${finalPercent}%\n✨ تحت إشراف مستر أيمن كامل.`;
     window.open(`https://wa.me/?text=${encodeURIComponent(txt)}`, '_blank');
 }
 function shareToTeacherWhatsApp() {
-    let txt = `👨‍🏫 تقرير تسليم - التقييم الشامل\n👤 الطالب: ${studentName}\n🎯 الدرجة: ${finalScore} / ${quizData.length}\n📊 النسبة: ${finalPercent}%`;
+    let txt = `👨‍🏫 تقرير تسليم - التقييم الشامل (الجزء الثاني)\n👤 الطالب: ${studentName}\n🎯 الدرجة: ${finalScore} / ${quizData.length}\n📊 النسبة: ${finalPercent}%`;
     window.open(`https://wa.me/201284749899?text=${encodeURIComponent(txt)}`, '_blank');
 }
 function sharePeerChallenge() {
-    let txt = `🔥 أنا جبت ${finalPercent}% في التحدي الشامل الأكبر (79 سؤال) لمستر أيمن كامل! تقدر تكسر السكور بتاعي؟ 🚀`;
+    let txt = `🔥 أنا جبت ${finalPercent}% في التحدي الشامل الأكبر (66 سؤال) لمستر أيمن كامل! تقدر تكسر السكور بتاعي؟ 🚀`;
     window.open(`https://wa.me/?text=${encodeURIComponent(txt)}`, '_blank');
 }
 
@@ -1078,7 +1056,7 @@ function downloadCertificate() {
     ctx.fillText(studentName, canvas.width / 2, 320);
 
     ctx.fillStyle = "#64748B"; ctx.font = "25px 'Outfit'";
-    ctx.fillText(`For successfully conquering the Grand Finale (79 Missions) with an accuracy of`, canvas.width / 2, 420);
+    ctx.fillText(`For successfully conquering the Grand Finale (Part 2) with an accuracy of`, canvas.width / 2, 420);
 
     ctx.fillStyle = "#10B981"; ctx.font = "bold 55px 'Outfit'";
     ctx.fillText(`${finalScore} / ${quizData.length}  (${finalPercent}%)`, canvas.width / 2, 500);
@@ -1090,10 +1068,10 @@ function downloadCertificate() {
     ctx.fillText("Achievement Date: " + d.toLocaleDateString('en-GB'), canvas.width / 2, 640);
 
     ctx.globalAlpha = 0.6; ctx.textAlign = "left"; ctx.font = "16px 'Outfit'";
-    ctx.fillText("ID: LMV-" + d.getFullYear() + "-" + Math.floor(Math.random()*90000+10000), 55, 655);
+    ctx.fillText("ID: LMV2-" + d.getFullYear() + "-" + Math.floor(Math.random()*90000+10000), 55, 655);
     ctx.globalAlpha = 1.0;
 
-    const link = document.createElement('a'); link.download = `Grand_Mastery_${studentName}.png`;
+    const link = document.createElement('a'); link.download = `Grand_Mastery_${studentName}_P2.png`;
     link.href = canvas.toDataURL('image/png'); link.click();
 }
 </script>
