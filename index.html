@@ -6,8 +6,8 @@
     <!-- Theme Name: Luminous Nova (Part 2 - 66 Qs) -->
     <title>Masterclass Grand Finale - Part 2</title>
 
-    <meta property="og:title" content="🌟 التحدي الشامل الأكبر (الجزء الثاني) 🚀">
-    <meta property="og:description" content="الجزء الختامي من اختبار النخبة الشامل. 66 سؤالاً لتأكيد إتقانك التام.">
+    <meta property="og:title" content="🌟 التحدي الشامل  🚀">
+    <meta property="og:description" content="اختبار النخبة الشامل. لتأكيد إتقانك التام">
     <meta property="og:image" content="https://dummyimage.com/1200x630/FFFFFF/3B82F6.png&text=Luminous+Challenge+Part+2">
     
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Outfit:wght@400;500;700;800;900&display=swap" rel="stylesheet">
@@ -27,6 +27,7 @@
             --success-color: #10B981;
         }
 
+        /* 🌈 Bright Chroma Shifts */
         body.theme-1 { --accent: #3B82F6; --accent-glow: rgba(59, 130, 246, 0.2); } 
         body.theme-2 { --accent: #EC4899; --accent-glow: rgba(236, 72, 153, 0.2); } 
         body.theme-3 { --accent: #8B5CF6; --accent-glow: rgba(139, 92, 246, 0.2); } 
@@ -68,6 +69,7 @@
             display: flex; flex-direction: column; position: relative; z-index: 10;
         }
 
+        /* --- Header Hierarchy --- */
         header {
             padding: 35px 20px 25px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px;
             border-bottom: 1px solid rgba(0,0,0,0.05); position: relative;
@@ -86,7 +88,7 @@
         header .slogan { 
             font-family: 'Outfit', sans-serif; font-size: 15px; font-weight: 600; font-style: italic; 
             color: var(--accent); letter-spacing: 1px; margin: 5px 0 10px 0; 
-            direction: ltr; display: inline-block;
+            direction: ltr; unicode-bidi: isolate; display: inline-block;
         }
         
         .vip-phone {
@@ -96,6 +98,7 @@
             display: inline-flex; align-items: center; justify-content: center; direction: ltr;
         }
 
+        /* --- Controls --- */
         .time-controls { 
             position: absolute; top: 20px; left: 20px; display: flex; align-items: center; gap: 8px; z-index: 20; 
             direction: ltr; 
@@ -120,6 +123,7 @@
         
         .eye-care-controls { position: absolute; top: 20px; right: 20px; display: flex; gap: 8px; z-index: 20;}
 
+        /* --- Cheers --- */
         .cheer-wrapper { position: fixed; top: -120px; right: 20px; z-index: 99999; pointer-events: none; transition: top 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
         .cheer-wrapper.show { top: 20px; }
         .cheer-bubble {
@@ -141,6 +145,7 @@
         @keyframes shake { 0%, 100% {transform: translateX(0);} 25% {transform: translateX(-5px);} 50% {transform: translateX(5px);} 75% {transform: translateX(-5px);} }
         @keyframes blink { 0%, 100% {opacity:1;} 50% {opacity:0.2;} }
 
+        /* --- Content --- */
         .content-body { padding: 40px 30px; flex: 1; position: relative;}
 
         #start-screen { text-align: center; }
@@ -151,7 +156,7 @@
         .welcome-card h3 { font-size: 26px; font-weight: 900; color: var(--accent); margin-bottom: 15px;}
         .welcome-card p { font-size: 16px; color: var(--text-muted); line-height: 1.8; font-weight: 700;}
 
-        /* Time Attack Grid Styles */
+        /* --- Time Attack Grid Styles --- */
         .ta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 30px; }
         .ta-btn { 
             background: #FFFFFF; color: var(--text-muted); border: 2px solid #E2E8F0; 
@@ -176,6 +181,7 @@
 
         #quiz-screen { display: none; }
         
+        /* 🚀 Modified HUD Progress Bar */
         .hud-progress-wrapper {
             background: #FFFFFF; border: 1px solid #E2E8F0;
             border-radius: 16px; padding: 20px 25px 30px 25px; margin-bottom: 35px;
@@ -260,6 +266,7 @@
         #result-screen { display: none; direction: rtl; }
         .score-card { background: #FFFFFF; border-radius: 24px; padding: 50px 25px; text-align: center; margin-bottom: 40px; border: 1px solid #E2E8F0; box-shadow: 0 20px 50px rgba(0,0,0,0.05); position: relative;}
         
+        /* 🏆 Giant LTR Score Circle */
         .score-circle {
             width: 240px; height: 240px; border-radius: 50%; margin: 0 auto 30px; 
             display: flex; align-items: center; justify-content: center;
@@ -270,6 +277,7 @@
         }
         #score-percent-text { font-family: 'Outfit', 'Cairo'; font-size: 24px; font-weight: 900; color: var(--accent); margin-bottom: 8px; letter-spacing: 1px;}
         
+        /* Result Student Display */
         #student-display-name { font-size: 28px; font-weight: 900; color: var(--text-main); margin-bottom: 20px; display: flex; align-items: center; justify-content: center; gap: 15px;}
         .result-avatar { 
             font-size: 35px; background: #F8FAFC; border: 3px solid var(--accent); box-shadow: 0 5px 20px var(--accent-glow);
@@ -506,4 +514,606 @@
 
         <div id="result-screen">
             <div class="score-card">
-                <div class="score-circle" id="score-percentage">
+                <div class="score-circle" id="score-percentage">0 / 0</div>
+                <div id="score-percent-text">Accuracy: 0%</div>
+                <h2 id="student-display-name"></h2>
+                
+                <div class="scratch-container">
+                    <div id="badge-award-box" class="badge-award">اخدش لترى حالتك</div>
+                    <canvas id="scratch-canvas"></canvas>
+                </div>
+                <p id="score-details" style="font-size: 16px; font-weight: 700; margin-top: 25px; color: var(--text-muted);"></p>
+            </div>
+
+            <div class="result-actions">
+                <button type="button" class="btn btn-solid btn-full" id="cert-btn" onclick="downloadCertificate()" style="display: none;">📜 استخراج شهادة النخبة</button>
+                <button type="button" class="btn btn-outline" style="background:rgba(0,0,0,0.02); color:var(--text-main); border-color:#E2E8F0;" onclick="downloadSmartRevision()">📥 تحميل روشتة الأخطاء PDF</button>
+                <button type="button" class="btn btn-outline btn-whatsapp" onclick="shareToTeacherWhatsApp()">👨‍🏫 إرسال التقرير لمستر أيمن</button>
+                <button type="button" class="btn btn-outline btn-whatsapp" onclick="shareToParentWhatsApp()">👨‍👩‍👧 تقرير ولي الأمر (واتساب)</button>
+                <button type="button" class="btn btn-outline" style="color:var(--accent); border-color:var(--accent);" onclick="sharePeerChallenge()">🔥 تحدى زميلك (فيرال)</button>
+                <button type="button" class="btn btn-outline" onclick="location.reload()">🔄 إعادة المحاولة</button>
+            </div>
+
+            <h3 style="text-align: right; color: var(--text-main); margin-top: 35px; border-bottom: 2px dashed #E2E8F0; padding-bottom: 12px; font-weight: 900;">📂 المراجعة اللحظية (Smart Revision):</h3>
+            <div id="review-list" style="margin-top: 25px;"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+const EMAILJS_SERVICE_ID = "service_uu1lnnq";
+const EMAILJS_PUBLIC_KEY = "KUgWaj4LYP2IAcRuZ";
+const EMAILJS_TEMPLATE_ID = "template_vlyjktl";
+(function(){ if (typeof emailjs !== 'undefined') emailjs.init(EMAILJS_PUBLIC_KEY); })();
+
+function sendReportToTeacher(examName, name, finalScore, finalPercent, time, wrongAnswersText, warningsCount, weakestSkill) {
+    let params = new URLSearchParams();
+    params.append("examName", examName);
+    params.append("studentName", name);
+    params.append("score", finalScore);
+    params.append("percentage", finalPercent);
+    params.append("date", new Date().toLocaleString('en-GB'));
+    params.append("timeSpent", time);
+    params.append("wrongAnswers", wrongAnswersText);
+    params.append("cheatWarnings", warningsCount);
+    params.append("weakestRule", weakestSkill);
+
+    fetch("https://script.google.com/macros/s/AKfycbxps3pkSIfSFL8rwhCNMlNCEYkeL2ooxYo_6WgWRXHHL0hcY0owu-x0qRtZei0migOyxg/exec", {
+        method: "POST", body: params, mode: "no-cors", headers: { "Content-Type": "application/x-www-form-urlencoded" }
+    }).then(() => console.log("Sent")).catch(e => console.error("Error:", e));
+}
+
+function tryVibrate(pattern) { if (navigator.vibrate) { try { navigator.vibrate(pattern); } catch(e){} } }
+
+let audioCtx = null;
+function initAudio() {
+    try {
+        if (!audioCtx) { const AudioContext = window.AudioContext || window.webkitAudioContext; if(AudioContext) { audioCtx = new AudioContext(); } }
+        if (audioCtx && audioCtx.state === 'suspended') { audioCtx.resume(); }
+    } catch(e) {}
+}
+function playTone(freq, type, duration) {
+    try {
+        initAudio(); if (!audioCtx) return;
+        let osc = audioCtx.createOscillator(), gain = audioCtx.createGain();
+        osc.type = type; osc.frequency.value = freq;
+        gain.gain.setValueAtTime(0.05, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + duration);
+        osc.connect(gain); gain.connect(audioCtx.destination);
+        osc.start(); osc.stop(audioCtx.currentTime + duration);
+    } catch(e) {}
+}
+function soundWrongTime() { tryVibrate([100, 50, 100]); playTone(150, 'sawtooth', 0.3); setTimeout(()=>playTone(100, 'sawtooth', 0.4), 200); }
+function soundBossWin() { tryVibrate([200, 100, 200, 100, 200]); [523, 659, 783, 1046, 1318].forEach((f,i)=> setTimeout(()=>playTone(f,'square',0.15), i*100)); }
+
+function speakQuestion() {
+    if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+        let text = quizData[currentQuestion].originalQ.replace(/_+/g, "blank");
+        let msg = new SpeechSynthesisUtterance(text); msg.lang = 'en-US'; msg.rate = 0.85;
+        window.speechSynthesis.speak(msg);
+    }
+}
+
+function initScratchCard() {
+    const container = document.getElementById("badge-award-box");
+    const canvas = document.getElementById("scratch-canvas");
+    const ctx = canvas.getContext("2d");
+    canvas.width = container.offsetWidth; canvas.height = container.offsetHeight;
+    
+    let currentAccent = getComputedStyle(document.body).getPropertyValue('--accent').trim() || '#3B82F6';
+    ctx.fillStyle = '#FFFFFF'; ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.font = "bold 18px 'Cairo', sans-serif"; ctx.fillStyle = currentAccent;
+    ctx.textAlign = "center"; ctx.textBaseline = "middle";
+    ctx.fillText("🪄 اخدش لمعرفة النتيجة", canvas.width/2, canvas.height/2);
+    
+    let isDrawing = false;
+    function scratch(e) {
+        if(!isDrawing) return; e.preventDefault();
+        let rect = canvas.getBoundingClientRect();
+        let x = (e.clientX || (e.touches && e.touches[0].clientX)) - rect.left;
+        let y = (e.clientY || (e.touches && e.touches[0].clientY)) - rect.top;
+        ctx.globalCompositeOperation = "destination-out";
+        ctx.beginPath(); ctx.arc(x, y, 30, 0, Math.PI*2); ctx.fill();
+    }
+    canvas.onmousedown = () => isDrawing = true; canvas.ontouchstart = () => isDrawing = true;
+    canvas.onmouseup = () => isDrawing = false; canvas.ontouchend = () => isDrawing = false;
+    canvas.onmousemove = scratch; canvas.ontouchmove = scratch;
+}
+
+const cheers = [
+    {en: "🚀 Keep pushing forward!", ar: "عاش يا بطل، كمل في طريقك!"},
+    {en: "🧠 Stay focused!", ar: "الله ينور، تركيزك عالي جداً!"},
+    {en: "💪 You're doing great!", ar: "مجهود جبار، متوقفش!"},
+    {en: "🌟 Trust your instincts!", ar: "خليك واثق في إجاباتك، أنت قدها!"},
+    {en: "🛡️ Every step makes you stronger!", ar: "وحش! كل سؤال بيقربك للقمة!"},
+    {en: "🔥 Don't give up!", ar: "أوعى تستسلم، هانت جداً!"},
+    {en: "🎯 Keep your eyes on the goal!", ar: "عينك على التقفيل، ركز!"},
+    {en: "🧘 Take a deep breath...", ar: "خد نفس عميق، وكمل برواقة."},
+    {en: "⚡ Your effort matters!", ar: "تعبك وتركيزك ده مش هيروح عالفاضي!"}
+];
+let lastCheerIndex = -1; 
+function triggerTeacherCheer() {
+    const wrapper = document.getElementById("cheer-wrapper");
+    let randomIndex; do { randomIndex = Math.floor(Math.random() * cheers.length); } while (randomIndex === lastCheerIndex); 
+    lastCheerIndex = randomIndex;
+    document.getElementById("cheer-en").innerText = cheers[randomIndex].en;
+    document.getElementById("cheer-ar").innerText = cheers[randomIndex].ar;
+    wrapper.classList.add("show"); setTimeout(() => { wrapper.classList.remove("show"); }, 3500);
+}
+
+let logoClicks = 0, logoClickTimer;
+function triggerEasterEgg() {
+    logoClicks++; clearTimeout(logoClickTimer);
+    logoClickTimer = setTimeout(() => { logoClicks = 0; }, 1500);
+    if(logoClicks >= 5) { soundBossWin(); alert("⚡ Luminous Nova Easter Egg Found! ⚡"); logoClicks = 0; }
+}
+
+function changeFontSize(change) {
+    const root = document.documentElement;
+    let currentSize = parseInt(getComputedStyle(root).getPropertyValue('--q-font-size')) || 22;
+    let newSize = currentSize + change;
+    if(newSize >= 16 && newSize <= 30) { root.style.setProperty('--q-font-size', newSize + 'px'); }
+}
+
+const rawData = [
+    { rule: "Present Perfect meaning", q: "Which sentence tells us that Tom is still working in the factory?", options: ["Tom worked in that factory for ten years.", "Tom used to work in that factory.", "Tom has worked in that factory for ten years.", "Tom was working in that factory."], answer: 2, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Present Perfect (has worked) implies the action is connected to the present.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> المضارع التام يعبر عن حدث مازال مستمراً.</div>" },
+    { rule: "Time Clause", q: "After Yosra ______ her degree, she will get a job as a surgeon.", options: ["finished", "was finishing", "has finished", "had finished"], answer: 2, exp: "<div class='exp-en'>💡 <b>Explanation:</b> After + Present Simple/Perfect -> Future.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> الروابط الزمنية لو الجملة التانية مستقبل، الأولى مضارع.</div>" },
+    { rule: "Superlative", q: "This is the most interesting novel I ______ .", options: ["have never read", "have ever read", "had never read", "was reading"], answer: 1, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Superlative is followed by Present Perfect + 'ever'.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> صيغة التفضيل بييجي معاها مضارع تام وفيه ever.</div>" },
+    { rule: "Passive", q: "One of his friends ______ in the accident.", options: ["has injured", "injured", "has been injured", "had injured"], answer: 2, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Passive Voice.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> الصديق أُصيب (مبني للمجهول).</div>" },
+    { rule: "Been to", q: "Sorry for being late for the meeting, Sir. Please, let me in. I ______ the clinic.", options: ["had been to", "have been in", "have gone to", "have been to"], answer: 3, exp: "<div class='exp-en'>💡 <b>Explanation:</b> He went to the clinic and has returned.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> كان في العيادة ورجع.</div>" },
+    { rule: "Result", q: "Finally, my mother ______ how to use the internet. Now she can send e-mails.", options: ["learns", "has learnt", "had learnt", "was learning"], answer: 1, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Action happened in the past with a present result.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> حدث تم وله نتيجة في الحاضر.</div>" },
+    { rule: "Passive", q: "Everybody ______ a chance to talk in the conference.", options: ["have been given", "were given", "has been given", "has given"], answer: 2, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'Everybody' is singular. Passive voice.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> كلمة (Everybody) تعامل معاملة المفرد، ومجهول.</div>" },
+    { rule: "Time Clause", q: "We won't be able to live on Mars until we ______ enough water there.", options: ["will find", "have found", "will be finding", "found"], answer: 1, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Future + until + Present Simple/Perfect.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> الرابط (until) قبله مستقبل وبعده مضارع.</div>" },
+    { rule: "Experience", q: "Many of today's great writers ______ as teachers.", options: ["have also worked", "had also worked", "also works", "are also working"], answer: 0, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Refers to experiences of living people.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> خبرات أشخاص ما زالوا أحياء.</div>" },
+    { rule: "Ever in Negative", q: "Nothing like this has ______ happened to me.", options: ["up till now", "never", "ever", "recently"], answer: 2, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'Nothing' makes the sentence negative, so use 'ever'.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> الجملة منفية بكلمة (Nothing).</div>" },
+    { rule: "For", q: "Sally has been working here ______ .", options: ["for six months", "since six months", "six months ago", "by six months"], answer: 0, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'six months' is a duration.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> ستة أشهر (مدة زمنية) فتاخد for.</div>" },
+    { rule: "Been to", q: "Although he ______ to France twice this year, he's going again next week.", options: ["goes", "has gone", "has been", "will have gone"], answer: 2, exp: "<div class='exp-en'>💡 <b>Explanation:</b> He went and returned.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> راح ورجع.</div>" },
+    { rule: "Since", q: "Have you eaten anything ______ this morning?", options: ["for", "ago", "by", "since"], answer: 3, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'this morning' is a specific starting point.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> نقطة زمنية محددة.</div>" },
+    { rule: "It is + Since", q: "It's two years ______ Joe.", options: ["that I don't see", "that I haven't seen", "since I didn't see", "since I last saw"], answer: 3, exp: "<div class='exp-en'>💡 <b>Explanation:</b> It is + time duration + since + Past Simple.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> تركيبة ثابتة.</div>" },
+    { rule: "Quantity", q: "Ahmed ______ typing three reports.", options: ["has finished", "has been finished", "has been finishing", "had been finished"], answer: 0, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Mentioning a completed quantity requires Simple Perfect.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> ذكر الكمية المنجزة يمنع المستمر.</div>" },
+    { rule: "Since when", q: "______ when have you lived in your home?", options: ["How long", "Recently", "Since", "For"], answer: 2, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'Since when' is used to ask about the starting point.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> للسؤال عن نقطة البداية.</div>" },
+    { rule: "For how long", q: "______ how long have you been studying English?", options: ["For", "Since", "So far", "Recently"], answer: 0, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'For how long' is used to ask about duration.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> للسؤال عن طول المدة.</div>" },
+    { rule: "Already", q: "Have you eaten all the food ______? - You must have been very hungry.", options: ["yet", "since", "recently", "already"], answer: 3, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Used in questions to express surprise.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> سؤال تعجب ودهشة.</div>" },
+    { rule: "Since Point", q: "______ the death of her father, I have never seen her smiling.", options: ["So far", "For", "Since", "When"], answer: 2, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'the death' is a specific starting event.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> حدث يمثل نقطة بداية.</div>" },
+    { rule: "For vs Since trap", q: "Mai has been ill ______ the last week.", options: ["for", "since", "already", "recently"], answer: 0, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'the last week' is a duration (takes 'for').</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> وجود (the) قبل last week يخليها مدة زمنية.</div>" },
+    { rule: "Since Clause", q: "My phone ______ very well since I dropped it last week.", options: ["hadn't worked", "hasn't worked", "wasn't worked", "isn't working"], answer: 1, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'since' + Past Simple is preceded by Present Perfect.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> رابط since يسبقه مضارع تام.</div>" },
+    { rule: "Meaning", q: "The last time I saw her was a week ago. This means ______", options: ["I haven't seen her for a week.", "I have seen her for a week.", "I haven't seen her since a week.", "a & b are correct."], answer: 0, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'last time... a week ago' = 'haven't seen... for a week'.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> مشفتهاش بقالي أسبوع.</div>" },
+    { rule: "Passive Yet", q: "His new novel ______ yet.", options: ["has published", "hasn't published", "hasn't been published", "has been published"], answer: 2, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Passive voice + negative (yet).</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> الرواية تُنشر (مجهول)، والجملة منفية.</div>" },
+    { rule: "Meaning", q: "He hasn't played tennis since he was in the club last week. This means that ______", options: ["he last played tennis in the club a week ago", "he didn't play tennis last week", "he hasn't played tennis before", "he is still playing tennis in the club"], answer: 0, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Hasn't played since last week = last played a week ago.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> آخر مرة لعب كانت من أسبوع.</div>" },
+    { rule: "Structure", q: "Which of the following is structurally correct?", options: ["I haven't met Mai since I call you.", "I didn't met Mai since I called you.", "I haven't met Mai for I called you.", "I haven't met Mai since I called you."], answer: 3, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Present Perfect + since + Past Simple.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> مضارع تام + since + ماضي بسيط.</div>" },
+    { rule: "Correction", q: "'I am here since 2020.' Which of the following corrects the mistake in this sentence?", options: ["here -> there", "since -> for", "am -> have been", "since 2020 -> in 2020"], answer: 2, exp: "<div class='exp-en'>💡 <b>Explanation:</b> With 'since 2020', we need Present Perfect.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> منذ 2020 تتطلب مضارع تام.</div>" },
+    { rule: "Passive Continuous", q: "Staff have ______ new skills to meet the new challenges of development.", options: ["be given", "been giving", "been given", "given"], answer: 2, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Passive Present Perfect. The staff receive the skills.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> الموظفون (أُعطوا) مهارات، مبني للمجهول في المضارع التام.</div>" },
+    { rule: "State vs Action", q: "Where ______ ? We've ______ for you for half an hour.", options: ["you have been being / been waiting", "you have been / waited", "have you been / been waiting", "have you been being / been waiting"], answer: 2, exp: "<div class='exp-en'>💡 <b>Explanation:</b> First asks about state. Second emphasizes continuous duration.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> سؤال عن حالة، يليه حدث استمر لمدة نصف ساعة.</div>" },
+    { rule: "Continuous vs Simple", q: "We've ______ about learning Spanish for a while, but we ______ a good course yet.", options: ["thought / haven't found", "thought / haven't been finding", "been thinking / haven't been finding", "been thinking / haven't found"], answer: 3, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Thinking is continuous. Finding is a completed result with 'yet'.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> التفكير استمر، أما الإيجاد لم يكتمل بعد.</div>" },
+    { rule: "Continuous vs Simple", q: "Heba ______ the housework for three hours, but she ______ yet.", options: ["has done / hasn't finished", "has been done / hasn't finished", "has been doing / hasn't been finishing", "has been doing / hasn't finished"], answer: 3, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Continuous duration vs incomplete state.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> الحدث الأول استمر، والثاني نتيجته لم تكتمل.</div>" },
+    { rule: "Completed Action", q: "Aya ______ all her exams and is going to start university next month.", options: ["has passed", "has been passing", "passes", "will be passing"], answer: 0, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Completed action with a present result.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> حدث اكتمل وله نتيجة (ستدخل الجامعة).</div>" },
+    { rule: "Continuous Pattern", q: "Ali broke his leg and has to stay in bed, so he ______ a lot of films recently!", options: ["is watching", "has been watching", "was watching", "will be watching"], answer: 1, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Action happening repeatedly over a recent period.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> حدث يتكرر ويستمر في الفترة الأخيرة.</div>" },
+    { rule: "Just", q: "My pen friend arrived at Cairo Airport a moment ago. This means that he ______ .", options: ["has just arrived", "just has arrived", "hasn't arrived", "will arrive"], answer: 0, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'a moment ago' equals 'has just + PP'.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> وصل منذ لحظة = لقد وصل للتو.</div>" },
+    { rule: "Quantity", q: "I ______ a large number of research studies on this topic. I know much.", options: ["has read", "have been reading", "have been read", "have read"], answer: 3, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Mentioning quantity means Simple Perfect.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> ذكر الكمية يمنع استخدام المستمر.</div>" },
+    { rule: "Passive Since", q: "The film ______ by many millions of people since it was made in 1968.", options: ["has watched", "has been watching", "has been watched", "had been watched"], answer: 2, exp: "<div class='exp-en'>💡 <b>Explanation:</b> The subject is passive.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> الفيلم (تُم مشاهدته) مبني للمجهول.</div>" },
+    { rule: "Continuous", q: "Researchers ______ at what makes people successful for a very long time.", options: ["have been looking", "has been looking", "have been looked", "have looking"], answer: 0, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Plural subject + continuous duration.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> الباحثون + مدة مستمرة.</div>" },
+    { rule: "Stative Have", q: "I ______ very much time to work on this project lately.", options: ["haven't been", "haven't been having", "haven't been had", "haven't had"], answer: 3, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'have' indicating possession is stative.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> الفعل have بمعنى يمتلك لا يوضع في الاستمرار.</div>" },
+    { rule: "Completed Action", q: "My bike is OK again now. I ______ it.", options: ["have been repaired", "have repaired", "have been repairing", "had repaired"], answer: 1, exp: "<div class='exp-en'>💡 <b>Explanation:</b> The result means the repair action is completed.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> عملية التصليح اكتملت وانتهت (تام بسيط).</div>" },
+    { rule: "Experience", q: "I have ______ playing the drums as much as I do at the moment.", options: ["enjoyed never", "never been enjoyed", "been never enjoying", "never enjoyed"], answer: 3, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Focuses on an experience up to now. Adverb 'never' precedes verb.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> يعبر عن تجربة شعورية لم تحدث من قبل.</div>" },
+    { rule: "Continuous Habit", q: "Ali ______ too much recently. He should eat less.", options: ["has eaten", "had been eating", "has been eating", "has been eaten"], answer: 2, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Focuses on the recent ongoing habit causing a problem now.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> عادة مستمرة مؤخراً أدت لنتيجة سلبية تتطلب نصيحة.</div>" },
+    { rule: "Never", q: "I ______ such a beautiful sunset.", options: ["have never see", "have never seen", "have ever seen", "have never been seen"], answer: 1, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Expressing a life experience up to the present negatively.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> التعبير عن عدم حدوث تجربة طوال الحياة حتى الآن.</div>" },
+    { rule: "Continuous Result", q: "My hands are very dirty. I ______ my bike.", options: ["had been repaired", "have repaired", "have been repaired", "have been repairing"], answer: 3, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Present visible evidence of a recent continuous action.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> أثر مرئي في المضارع نتيجة حدث استغرق وقتاً.</div>" },
+    { rule: "Completed Action", q: "Somebody ______ all the chocolates. The box is empty.", options: ["has eaten", "have eaten", "has been eating", "have been eating"], answer: 0, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'Somebody' is singular. The action is completed (box is empty).</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> Somebody مفرد، والحدث اكتمل والدليل فراغ العلبة.</div>" },
+    { rule: "Since Point", q: "I haven't seen her ______ five years ago.", options: ["just", "already", "since", "for"], answer: 2, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'since' + [time] + 'ago' creates a specific point in time.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> التركيبة (مدة + ago) تعتبر نقطة بداية محددة فنستخدم since.</div>" },
+    { rule: "Continuous Result", q: "He's out of breath because he ______ .", options: ["was running", "had run", "has run", "has been running"], answer: 3, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Present physical result of a recent continuous activity.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> أثر بدني واضح (يلهث) لحدث استمر وانتهى للتو.</div>" },
+    { rule: "Continuous Meaning", q: "Ali has been living here since he was a child. This means ______ .", options: ["Ali no longer lives here", "Ali lived here", "Ali lives here now", "Ali is a child"], answer: 2, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Present perfect continuous means the action continues into the present.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> معناه إن الحدث بدأ ومازال يحدث (يعيش هنا الآن).</div>" },
+    { rule: "Been to", q: "Ali ______ school. He has just arrived home.", options: ["has been to", "has been in", "has gone to", "has been"], answer: 0, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'has been to' means he went and came back.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> طالما وصل البيت، فهذا يعني أنه (ذهب وعاد).</div>" },
+    { rule: "Before", q: "I haven't met the General Manager ______ . It's my first time to meet him.", options: ["lately", "never", "already", "before"], answer: 3, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'before' is used at the end of a negative present perfect sentence.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> تأتي كلمة before في نهاية الجملة المنفية.</div>" },
+    { rule: "Passive Voice", q: "Our block of flats ........ since last week.", options: ["have repainted", "has been repainted", "has repainted", "have been repainted"], answer: 1, exp: "<div class='exp-en'>💡 <b>Explanation:</b> The subject 'block' is singular, and the sentence is passive.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> العمارة (مفرد) ومجهول، فهنختار has been + P.P.</div>" },
+    { rule: "Reported Speech", q: "Tamer said that he ........ English for four hours now.", options: ["has been studying", "was studying", "is studying", "had been studying"], answer: 0, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'now' in reported speech shows the action is still relevant, keeping it present perfect continuous.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> وجود now يمنع تحويل الزمن للماضي الأبعد، فنحتفظ بالمضارع التام المستمر.</div>" },
+    { rule: "Since & For", q: "They started living here in 2015. This means ........", options: ["They have started live here since 2015", "They haven't lived here since 2015", "They have started living here since 2015", "They have lived here since 2015"], answer: 3, exp: "<div class='exp-en'>💡 <b>Explanation:</b> We don't use 'start' with 'since' for states. We use the main verb 'live'.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> نستخدم الفعل الأساسي (live) في المضارع التام.</div>" },
+    { rule: "Been to vs Gone to", q: "They have been to Luxor. This means ........", options: ["They are in Luxor.", "They aren't in Luxor now.", "They will go to Luxor someday.", "They have gone to Luxor."], answer: 1, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'have been to' means a person went to a place and has already returned.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> معناه إنهم راحوا الأقصر ورجعوا، يعني مش هناك دلوقتي.</div>" },
+    { rule: "Stative Verbs", q: "We ........ to the tennis club since we moved here.", options: ["have belonged", "have been belonging", "had belonged", "belonged"], answer: 0, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'belong' is a stative verb. It cannot be used in continuous tense.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> الفعل belong من أفعال الحالة، ومينفعش يتحطله ing.</div>" },
+    { rule: "Stative Verbs", q: "We've visited my parents every week since we ........ the car.", options: ["'ve had", "'ve been having", "had had", "are having"], answer: 0, exp: "<div class='exp-en'>💡 <b>Explanation:</b> The clause after 'since' can be present perfect if the state continues to the present. 'have' is stative.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> الجملة بعد since تيجي مضارع تام لو الحالة لسه مستمرة وطبعاً have مبتاخدش ing.</div>" },
+    { rule: "Present Perfect Simple", q: "There's not much more to do, now that we ........ the main problem.", options: ["have been solving", "have solved", "are solving", "were solving"], answer: 1, exp: "<div class='exp-en'>💡 <b>Explanation:</b> The action is completely finished with a current result. Simple present perfect is required.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> الحدث خلص واكتمل ونتيجته واضحة دلوقتي.</div>" },
+    { rule: "Present Perfect Simple", q: "I ........ all the museums in the city over the past five years.", options: ["have visited", "have been visiting", "visited", "am visiting"], answer: 0, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Mentioning quantity/completion ('all the museums') requires the simple perfect.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> تحديد الكمية أو العدد اللي تم إنجازه (كل المتاحف) يمنع الاستمرار.</div>" },
+    { rule: "Present Perfect Simple", q: "He has just gone out. This sentence means ........", options: ["He is going out now", "He went out a few minutes ago", "He goes out every day", "He will go out soon"], answer: 1, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'has just' is equivalent in meaning to past simple with 'a moment ago'.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> تعبير (has just) بيساوي في المعنى الماضي البسيط مع كلمة (منذ لحظات).</div>" },
+    { rule: "Since & For", q: "I've lived here ........ most of my life.", options: ["already", "since", "ever", "for"], answer: 3, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'most of my life' is a duration of time, so we use 'for'.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> عبارة (معظم حياتي) مدة زمنية استغرقها الحدث.</div>" },
+    { rule: "Subject Verb Agreement", q: "Neither of the witnesses ........ their testimony yet, which has delayed the trial.", options: ["has completed", "have completed", "hasn't completed", "had completed"], answer: 0, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'Neither of' takes a singular verb. The sentence is already negative.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> كلمة Neither بتدي معنى النفي، وبعدها فعل مفرد.</div>" },
+    { rule: "Present Perfect Simple", q: "With their win yesterday, Italy ........ into second place in the table.", options: ["was moving", "has moved", "has been moving", "had moved"], answer: 1, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Focus is on the present result (being in second place now) of a recent event.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> التركيز على النتيجة الحالية بسبب حدث لسه حاصل.</div>" },
+    { rule: "Present Perfect Continuous", q: "Sorry I haven't been able to see you. I ........ very hard.", options: ["had been working", "was working", "'ve worked", "'ve been working"], answer: 3, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Providing an excuse for a present situation by referencing a recently ongoing activity.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> تبرير موقف حالي بسبب إنه كان مستمر في الشغل جداً الفترة دي.</div>" },
+    { rule: "Stative Verbs", q: "She ........ him for 10 years, so they are good friends.", options: ["has known", "has been known", "has been knowing", "had known"], answer: 0, exp: "<div class='exp-en'>💡 <b>Explanation:</b> The verb 'know' is a stative verb. Stative verbs are not used in continuous tenses.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> الفعل know (يعرف) من أفعال الإدراك ومينفعش يتحط في الاستمرار.</div>" },
+    { rule: "Present Perfect Simple", q: "The doctors ........ many patients today.", options: ["treat", "have treated", "have been treated", "will treat"], answer: 1, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Mentioning a quantity ('many patients') achieved in an unfinished time period requires simple perfect.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> عدد اللي تم (مرضى كتير) في فترة لسه مخلصتش.</div>" },
+    { rule: "Present Perfect Continuous", q: "Since I first met her, I ........ to ask her out all this time, but I'm too shy.", options: ["have tried", "have been trying", "tried", "was trying"], answer: 1, exp: "<div class='exp-en'>💡 <b>Explanation:</b> 'all this time' emphasizes the duration and continuous nature of the action.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> عبارة (all this time) بتركز جداً على استمرارية الحدث طوال الوقت ده.</div>" },
+    { rule: "Present Continuous", q: "Why are you so quiet? - Because I ........ about the exam.", options: ["am thinking", "think", "thinks", "was thinking"], answer: 0, exp: "<div class='exp-en'>💡 <b>Explanation:</b> The question asks about the current moment. Action happening right now.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> السؤال عن اللحظة الحالية، والرد بيبين إنه بيفكر حالاً.</div>" },
+    { rule: "Present Perfect Simple", q: "How many times ........ that movie?", options: ["have you been seeing", "you have been seeing", "have you been seen", "have you seen"], answer: 3, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Questions starting with 'How many times' focus on the number of completed experiences.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> السؤال عن (العدد) بيركز على المرات اللي اكتمل فيها الحدث.</div>" }
+];
+
+let quizData = [];
+let currentQuestion = 0, userAnswers = {}, studentName = "", selectedAvatar = '🌟';
+let totalSeconds = 3960, qTimeLeft = 15, timerInterval = null, isTimeAttack = false;
+let isSubmitting = false; 
+let pauseCount = 0, isPaused = false; 
+
+// 🛡️ Silent Anti-Cheat
+let cheatWarningsCount = 0;
+
+document.addEventListener("visibilitychange", () => {
+    const quizScreen = document.getElementById("quiz-screen");
+    if (document.hidden && quizScreen.style.display === "block" && !isSubmitting) {
+        cheatWarningsCount++;
+        if (cheatWarningsCount > 3) {
+            alert("🚨 تم سحب الورقة تلقائياً لعدم الالتزام ببروتوكول التركيز داخل شاشة الاختبار.");
+            calculateScore(); 
+        } else {
+            document.getElementById('cheat-msg').innerText = `تم رصد خروجك من النظام.\nالتحذير (${cheatWarningsCount} من 3).\nفي المرة الرابعة سيتم سحب الورقة إجبارياً.`;
+            document.getElementById('cheat-modal').style.display = 'flex';
+            soundWrongTime();
+        }
+    }
+});
+document.addEventListener('contextmenu', e => e.preventDefault());
+document.addEventListener('keydown', e => {
+    if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J')) || (e.ctrlKey && e.key === 'U') || (e.ctrlKey && (e.key === 'c' || e.key === 'v' || e.key === 'x'))) e.preventDefault();
+});
+document.addEventListener('copy', e => e.preventDefault()); document.addEventListener('paste', e => e.preventDefault()); document.addEventListener('cut', e => e.preventDefault());
+
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
+
+function initQuizData() {
+    let tempArray = JSON.parse(JSON.stringify(rawData));
+    shuffleArray(tempArray); 
+    quizData = tempArray.map((item, index) => {
+        let correctText = item.options[item.answer];
+        shuffleArray(item.options); 
+        return {
+            rule: item.rule,
+            originalQ: item.q,
+            q: `${index + 1}. ` + item.q.replace(/^\d+\.\s*/, ''),
+            options: item.options,
+            answer: item.options.indexOf(correctText),
+            exp: item.exp
+        };
+    });
+}
+
+function updateChromaShift() {
+    let levelIndex = Math.floor(currentQuestion / 14); 
+    if(levelIndex > 4) levelIndex = 4;
+    document.body.className = `theme-${levelIndex + 1}`;
+}
+
+function setTimeAttack(level, el) {
+    timeAttackLevel = level;
+    isTimeAttack = (level > 0);
+    document.querySelectorAll('.ta-btn').forEach(btn => btn.classList.remove('active'));
+    el.classList.add('active');
+}
+
+function selectAvatar(el, avatar) {
+    document.querySelectorAll('.avatar-option').forEach(o => o.classList.remove('selected'));
+    el.classList.add('selected'); selectedAvatar = avatar;
+}
+
+function toggleTimerView() { document.getElementById("timer-text").classList.toggle("hidden-timer"); }
+
+function startQuiz() {
+    const input = document.getElementById("studentName").value.trim();
+    if (!input) { alert("أدخل اسمك لتبدأ التحدي!"); return; }
+    studentName = input; 
+    
+    initQuizData(); 
+    
+    document.getElementById("start-screen").style.display = "none";
+    document.getElementById("quiz-screen").style.display = "block";
+    document.getElementById("timer-container").style.display = "flex";
+    document.getElementById("eye-care-container").style.display = "flex";
+    
+    document.getElementById("hud-avatar").innerText = selectedAvatar;
+    document.getElementById("hud-name").innerText = studentName;
+    document.getElementById("hud-moving-avatar").innerText = selectedAvatar;
+
+    totalSeconds = quizData.length * 60; // 60 seconds per question for classic
+    if (!isTimeAttack) {
+        let m = Math.floor(totalSeconds / 60), s = totalSeconds % 60;
+        let displayM = m < 100 ? (m < 10 ? '0'+m : m) : m;
+        let displayS = s < 10 ? '0'+s : s;
+        document.getElementById("timer-text").innerText = `${displayM}:${displayS}`;
+    }
+
+    startTimer(); loadQuestion();
+}
+
+let typeInterval;
+function loadQuestion() {
+    updateChromaShift();
+
+    if(isTimeAttack) { 
+        qTimeLeft = timeAttackLevel; 
+        document.getElementById("timer-box").classList.remove("danger"); 
+        let displayS = qTimeLeft < 10 ? '0' + qTimeLeft : qTimeLeft;
+        document.getElementById("timer-text").innerText = `00:${displayS}`;
+    }
+
+    const item = quizData[currentQuestion];
+    const optionsList = document.getElementById("options-list");
+    
+    clearInterval(typeInterval);
+    optionsList.classList.remove("show-options");
+    optionsList.innerHTML = "";
+
+    item.options.forEach((opt, oIndex) => {
+        const div = document.createElement("div"); div.className = "option-item";
+        if (userAnswers[currentQuestion] === oIndex) div.classList.add("selected");
+        const letter = String.fromCharCode(65 + oIndex);
+        div.innerHTML = `<div class="opt-letter">${letter}</div> <div class="opt-text" style="direction: ltr;">${opt}</div>`;
+        div.onclick = () => selectOption(oIndex);
+        optionsList.appendChild(div);
+    });
+
+    document.getElementById("question-text-content").innerText = item.q;
+    optionsList.classList.add("show-options");
+
+    document.getElementById("progress-count").innerText = `Q: ${currentQuestion + 1} / ${quizData.length}`;
+    document.getElementById("energy-bar").style.width = `${Math.round(((currentQuestion + 1) / quizData.length) * 100)}%`;
+
+    document.getElementById("prev-btn").disabled = currentQuestion === 0;
+    
+    if(isTimeAttack) {
+        document.getElementById("prev-btn").style.display = "none";
+    }
+
+    document.getElementById("next-btn").style.display = (currentQuestion === quizData.length - 1) ? "none" : "inline-flex";
+    document.getElementById("submit-btn").style.display = (currentQuestion === quizData.length - 1) ? "inline-flex" : "none";
+}
+
+function selectOption(oIndex) {
+    userAnswers[currentQuestion] = oIndex;
+    const optionsList = document.getElementById("options-list");
+    Array.from(optionsList.children).forEach((child, i) => {
+        if(i === oIndex) child.classList.add("selected"); else child.classList.remove("selected");
+    });
+}
+
+function nextQuestion(force = false) {
+    if (!force && userAnswers[currentQuestion] === undefined) { alert("لازم تختار إجابة الأول عشان تكمل!"); return; }
+    if (currentQuestion < quizData.length - 1) { 
+        currentQuestion++;
+        if (currentQuestion % 5 === 0 && currentQuestion !== 0) triggerTeacherCheer();
+        loadQuestion();
+        
+        if (isTimeAttack) {
+            startTimer();
+        }
+    }
+}
+
+function prevQuestion() { 
+    if (currentQuestion > 0) { 
+        currentQuestion--; 
+        loadQuestion(); 
+        if (isTimeAttack) startTimer();
+    } 
+}
+
+function togglePause() {
+    if (isPaused) {
+        isPaused = false;
+        document.getElementById('pause-modal').style.display = 'none';
+        startTimer(); 
+    } else {
+        if (pauseCount >= 3) { alert("استنفدت كل محاولات الإيقاف (3/3)!"); return; }
+        isPaused = true; pauseCount++; clearInterval(timerInterval);
+        document.getElementById('pause-count-msg').innerText = `استخدمت (${pauseCount} من 3) محاولات إيقاف.`;
+        document.getElementById('pause-modal').style.display = 'flex';
+    }
+}
+
+function startTimer() {
+    clearInterval(timerInterval);
+    timerInterval = setInterval(() => {
+        if(isTimeAttack) {
+            qTimeLeft--;
+            let displayS = qTimeLeft < 10 ? '0' + qTimeLeft : qTimeLeft;
+            document.getElementById("timer-text").innerText = `00:${displayS}`;
+            if (qTimeLeft <= 5) {
+                document.getElementById("timer-box").classList.add("danger");
+                document.getElementById("app-container").classList.add("shake-active");
+                setTimeout(()=> document.getElementById("app-container").classList.remove("shake-active"), 400);
+            } else { document.getElementById("timer-box").classList.remove("danger"); }
+            
+            if (qTimeLeft <= 0) {
+                if(userAnswers[currentQuestion] === undefined) { userAnswers[currentQuestion] = -1; }
+                if(currentQuestion < quizData.length - 1) { nextQuestion(true); } else { calculateScore(); }
+            }
+        } else {
+            totalSeconds--;
+            let m = Math.floor(totalSeconds / 60), s = totalSeconds % 60;
+            let displayM = m < 100 ? (m < 10 ? '0'+m : m) : m;
+            let displayS = s < 10 ? '0'+s : s;
+            document.getElementById("timer-text").innerText = `${displayM}:${displayS}`;
+            if (totalSeconds <= 300) document.getElementById("timer-box").classList.add("danger");
+            if (totalSeconds <= 0) { clearInterval(timerInterval); calculateScore(); }
+        }
+    }, 1000);
+}
+
+function calculateScore() {
+    if(isSubmitting) return; 
+    isSubmitting = true;
+
+    try {
+        clearInterval(timerInterval);
+        
+        document.getElementById("quiz-screen").style.display = "none";
+        document.getElementById("timer-container").style.display = "none";
+        document.getElementById("eye-care-container").style.display = "none";
+        document.getElementById("result-screen").style.display = "block";
+        window.scroll({ top: 0, left: 0 });
+
+        let score = 0; 
+        const reviewList = document.getElementById("review-list"); 
+        if(reviewList) reviewList.innerHTML = "";
+
+        let wrongAnswersArray = [];
+        let rulesFailed = {}; 
+
+        quizData.forEach((item, index) => {
+            const isCorrect = userAnswers[index] === item.answer;
+            if (isCorrect) { score++; }
+            
+            let uiUserOptText = "لم يتم الحل ❌";
+            let emailUserOptText = "Not answered ❌";
+            
+            if (userAnswers[index] !== undefined && userAnswers[index] !== -1) {
+                uiUserOptText = item.options[userAnswers[index]];
+                emailUserOptText = item.options[userAnswers[index]];
+            }
+            const correctOpt = item.options[item.answer];
+
+            if (!isCorrect) {
+                rulesFailed[item.rule] = (rulesFailed[item.rule] || 0) + 1;
+
+                let emailExplanation = item.exp
+                    .replace(/class='exp-en'/g, "style='direction: ltr; text-align: left; color: #555; font-size: 14px; margin-bottom: 8px;'")
+                    .replace(/class='exp-separator'/g, "style='width: 100%; height: 1px; border-bottom: 1px dashed #ccc; margin: 8px 0;'")
+                    .replace(/class='exp-ar'/g, "style='direction: rtl; text-align: right; color: #000080; font-family: Tahoma, Arial, sans-serif; font-size: 14px; font-weight: bold; margin-top: 8px;'");
+
+                wrongAnswersArray.push(
+                    `<div style="margin-bottom: 20px; padding-bottom: 20px; border-bottom: 2px solid #e2e8f0;">` +
+                        `<div style="direction: ltr; text-align: left; font-weight: bold; color: #000080; margin-bottom: 8px; font-size: 16px;">Q${index + 1}: ${item.originalQ}</div>` +
+                        `<div style="direction: ltr; text-align: left; color: #F43F5E; font-size: 15px; margin-bottom: 4px;">❌ <b>Student's Answer:</b> ${emailUserOptText}</div>` +
+                        `<div style="direction: ltr; text-align: left; color: #10B981; font-size: 15px; margin-bottom: 10px;">✅ <b>Correct Answer:</b> ${correctOpt}</div>` +
+                        `<div style="background: rgba(0,0,0,0.04); padding: 12px; border-radius: 6px; border-left: 4px solid #FFD700;">` +
+                            emailExplanation + 
+                        `</div>` +
+                    `</div>`
+                );
+            }
+
+            const div = document.createElement("div");
+            div.className = `review-item ${isCorrect ? 'is-correct is-correct-item' : 'is-wrong is-wrong-item'}`;
+            div.innerHTML = `<div style="font-weight:800;font-size:16px;margin-bottom:8px; direction: ltr; color: var(--text-main);">${item.q}</div>
+                <div style="direction: rtl; color: var(--text-muted);">إجابتك: <b style="color:${isCorrect?'var(--success-color)':'var(--error-color)'}; direction: ltr; display: inline-block;">${uiUserOptText}</b></div>
+                ${!isCorrect ? `<div style="color:var(--success-color);font-weight:800;margin-top:4px; direction: rtl;">الإجابة الصحيحة: <span style="direction: ltr; display: inline-block;">${correctOpt}</span></div>` : ''}
+                <div class="explanation-box">${item.exp}</div>`;
+            if(reviewList) reviewList.appendChild(div);
+        });
+
+        let weakestSkill = "أداء ممتاز (لا يوجد أخطاء)";
+        if (Object.keys(rulesFailed).length > 0) {
+            weakestSkill = Object.keys(rulesFailed).reduce((a, b) => rulesFailed[a] > rulesFailed[b] ? a : b);
+        }
+
+        const percent = Math.round((score / quizData.length) * 100);
+        window.finalScore = score; window.finalPercent = percent;
+
+        document.body.className = "theme-1"; 
+        
+        document.getElementById("student-display-name").innerHTML = `<span class="result-avatar">${selectedAvatar}</span> ${studentName}`;
+        document.getElementById("score-percentage").innerText = `${score} / ${quizData.length}`;
+        document.getElementById("score-percent-text").innerText = `Accuracy: ${percent}%`;
+        
+        let modTxt = isTimeAttack ? " (Time Attack 🔥)" : "";
+        document.getElementById("score-details").innerText = `تم إنهاء التقييم الشامل بنجاح! ${modTxt}`;
+
+        let badge = percent >= 90 ? "👑 النخبة (Elite)" : percent >= 75 ? "🔥 أداء متميز (Pro)" : "🌱 محاولة مبشرة (Challenger)";
+        document.getElementById("badge-award-box").innerText = badge;
+        
+        if (percent >= 80) document.getElementById("cert-btn").style.display = "inline-flex";
+
+        setTimeout(() => {
+            try { soundBossWin(); } catch(e){}
+            try { initScratchCard(); } catch(e){}
+            try {
+                let confColor = getComputedStyle(document.body).getPropertyValue('--accent').trim() || '#3B82F6';
+                if (percent >= 80 && typeof confetti === 'function') confetti({ particleCount: 300, spread: 150, origin: { y: 0.6 }, colors: ['#F4F7F9', confColor, '#FFFFFF'] });
+            } catch(e){}
+            
+            try {
+                let usedTime = isTimeAttack ? "Time Attack" : ( (quizData.length * 60) - totalSeconds) + " Seconds";
+                let wrongAnswersText = wrongAnswersArray.length > 0 
+                    ? wrongAnswersArray.join('') 
+                    : "<p style='text-align:center; font-weight:bold; color:#10B981; font-size: 16px;'>Excellent! The student made zero mistakes. 🎉</p>";
+
+                sendReportToTeacher(
+                    "Luminous Nova Finale (Part 2 - 66 Qs)",
+                    studentName, 
+                    `${score} / ${quizData.length}`, 
+                    percent, 
+                    usedTime, 
+                    wrongAnswersText,
+                    cheatWarningsCount, 
+                    weakestSkill        
+                );
+            } catch(e){ console.error("حدث خطأ أثناء الإرسال:", e); }
+        }, 100);
+
+    } catch(e) { console.error("Error:", e); alert("حدث خطأ تقني أثناء معالجة النتيجة."); }
+}
+
+function shareToParentWhatsApp() {
+    let txt = `👨‍👩‍👧 تقرير أداء - التقييم الشامل الأكبر (الجزء الثاني)\n👤 الطالب: ${studentName}\n📊 النسبة: ${finalPercent}%\n✨ تحت إشراف مستر أيمن كامل.`;
+    window.open(`https://wa.me/?text=${encodeURIComponent(txt)}`, '_blank');
+}
+function shareToTeacherWhatsApp() {
+    let txt = `👨‍🏫 تقرير تسليم - التقييم الشامل (الجزء الثاني)\n👤 الطالب: ${studentName}\n🎯 الدرجة: ${finalScore} / ${quizData.length}\n📊 النسبة: ${finalPercent}%`;
+    window.open(`https://wa.me/201284749899?text=${encodeURIComponent(txt)}`, '_blank');
+}
+function sharePeerChallenge() {
+    let txt = `🔥 أنا جبت ${finalPercent}% في التحدي الشامل الأكبر (66 سؤال) لمستر أيمن كامل! تقدر تكسر السكور بتاعي؟ 🚀`;
+    window.open(`https://wa.me/?text=${encodeURIComponent(txt)}`, '_blank');
+}
+
+function downloadSmartRevision() {
+    document.body.classList.add('print-errors-only');
+    window.print();
+    setTimeout(() => { document.body.classList.remove('print-errors-only'); }, 500);
+}
+
+function downloadCertificate() {
+    const canvas = document.createElement('canvas'); canvas.width = 1000; canvas.height = 700; const ctx = canvas.getContext('2d');
+    let accent = getComputedStyle(document.body).getPropertyValue('--accent').trim() || '#3B82F6';
+
+    ctx.fillStyle = '#F4F7F9'; ctx.fillRect(0, 0, canvas.width, canvas.height);
+    
+    ctx.save(); ctx.translate(canvas.width / 2, canvas.height / 2); ctx.rotate(-Math.PI / 6);
+    ctx.globalAlpha = 0.05; ctx.font = "bold 110px 'Outfit'"; ctx.fillStyle = accent;
+    ctx.textAlign = "center"; ctx.textBaseline = "middle";
+    ctx.fillText("MR. AYMAN KAMEL", 0, -60); ctx.fillText("GRAND FINALE", 0, 70); ctx.restore();
+
+    ctx.strokeStyle = accent; ctx.lineWidth = 10; ctx.strokeRect(30, 30, canvas.width - 60, canvas.height - 60);
+    ctx.globalAlpha = 0.2; ctx.lineWidth = 3; ctx.strokeRect(42, 42, canvas.width - 84, canvas.height - 84); ctx.globalAlpha = 1.0;
+
+    ctx.textAlign = "center"; ctx.fillStyle = accent; ctx.font = "bold 45px 'Outfit'";
+    ctx.fillText("🌟 Certificate of Ultimate Mastery 🌟", canvas.width / 2, 120);
+
+    ctx.fillStyle = "#64748B"; ctx.font = "30px 'Outfit'";
+    ctx.fillText("This prestigious document is awarded to the elite student:", canvas.width / 2, 220);
+
+    ctx.fillStyle = "#0F172A"; ctx.font = "bold 65px 'Cairo'";
+    ctx.fillText(studentName, canvas.width / 2, 320);
+
+    ctx.fillStyle = "#64748B"; ctx.font = "25px 'Outfit'";
+    ctx.fillText(`For successfully conquering the Grand Finale (Part 2) with an accuracy of`, canvas.width / 2, 420);
+
+    ctx.fillStyle = "#10B981"; ctx.font = "bold 55px 'Outfit'";
+    ctx.fillText(`${finalScore} / ${quizData.length}  (${finalPercent}%)`, canvas.width / 2, 500);
+
+    ctx.fillStyle = accent; ctx.font = "22px 'Outfit'";
+    ctx.fillText("System Architect: Mr. Ayman Kamel", canvas.width / 2, 600);
+    
+    let d = new Date(); ctx.font = "18px 'Outfit'";
+    ctx.fillText("Achievement Date: " + d.toLocaleDateString('en-GB'), canvas.width / 2, 640);
+
+    ctx.globalAlpha = 0.6; ctx.textAlign = "left"; ctx.font = "16px 'Outfit'";
+    ctx.fillText("ID: LMV2-" + d.getFullYear() + "-" + Math.floor(Math.random()*90000+10000), 55, 655);
+    ctx.globalAlpha = 1.0;
+
+    const link = document.createElement('a'); link.download = `Grand_Mastery_${studentName}_P2.png`;
+    link.href = canvas.toDataURL('image/png'); link.click();
+}
+</script>
+</body>
+</html>
