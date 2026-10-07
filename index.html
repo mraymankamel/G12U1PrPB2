@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <!-- Theme Name: Luminous Nova (Part 2 - 66 Qs) -->
-    <title>Masterclass Grand Finale - Part 2</title>
+    <!-- Theme Name: Luminous Nova (Part 2 - 66 Qs - FIXED TIME ATTACK) -->
+    <title>🌟 التحدي الأكبر (الجزء الثاني) 🚀</title>
 
-    <meta property="og:title" content="🌟 التحدي الشامل  🚀">
-    <meta property="og:description" content="اختبار النخبة الشامل. لتأكيد إتقانك التام">
+    <meta property="og:title" content="🌟 التحدي الأكبر (الجزء الثاني) 🚀">
+    <meta property="og:description" content="الجزء الختامي من تحدي النخبة. هل تمتلك التركيز الكافي للوصول إلى القمة؟">
     <meta property="og:image" content="https://dummyimage.com/1200x630/FFFFFF/3B82F6.png&text=Luminous+Challenge+Part+2">
     
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Outfit:wght@400;500;700;800;900&display=swap" rel="stylesheet">
@@ -79,7 +79,7 @@
             width: 115px; height: 115px; object-fit: contain; margin-top: 10px;
             background-color: #FFFFFF !important; padding: 5px; border-radius: 50%;
             border: 3px solid var(--accent); box-shadow: 0 10px 25px var(--accent-glow);
-            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); cursor: pointer; flex-shrink: 0;
+            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); cursor: pointer; flex-shrink: 0; aspect-ratio: 1/1;
         }
         header img:hover { transform: scale(1.08) rotate(5deg); }
         
@@ -123,23 +123,23 @@
         
         .eye-care-controls { position: absolute; top: 20px; right: 20px; display: flex; gap: 8px; z-index: 20;}
 
-        /* --- Cheers --- */
+        /* --- Cheers (Smart Cheers - Egyptian Edition) --- */
         .cheer-wrapper { position: fixed; top: -120px; right: 20px; z-index: 99999; pointer-events: none; transition: top 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
         .cheer-wrapper.show { top: 20px; }
         .cheer-bubble {
             background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(15px); border-radius: 16px;
-            padding: 15px 20px; display: flex; align-items: center; gap: 15px;
+            padding: 15px 20px; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 15px;
             border: 1px solid #E2E8F0; border-right: 5px solid var(--accent);
             box-shadow: 0 20px 40px rgba(0,0,0,0.1); direction: rtl;
         }
         .cheer-bubble img { 
+            grid-column: 2; grid-row: 1 / span 3;
             width: 55px; height: 55px; border-radius: 50%; border: 2px solid var(--accent); 
-            background: #FFFFFF !important; padding: 4px; flex-shrink: 0; object-fit: contain;
-            margin: auto 0;
+            background: #FFFFFF !important; padding: 4px; flex-shrink: 0; object-fit: contain; aspect-ratio: 1/1;
         }
-        .cheer-text { display: flex; flex-direction: column; width: 100%; min-width: 200px; justify-content: center;}
-        .cheer-en { font-family:'Outfit', sans-serif; font-size:15px; font-weight:900; color:var(--text-main); direction:ltr; text-align:left; padding-bottom: 6px; line-height: 1.2;}
-        .cheer-ar { font-family:'Cairo', sans-serif; font-size:13px; font-weight:800; color:var(--accent); direction:rtl; text-align:right; border-top: 1px dashed #E2E8F0; padding-top: 6px; line-height: 1.2;}
+        .cheer-en { grid-column: 1; font-family:'Outfit', sans-serif; font-size:15px; font-weight:900; color:var(--text-main); direction:ltr; text-align:left; padding-bottom: 4px; line-height: 1.2;}
+        .cheer-separator { grid-column: 1; height: 1px; background: #E2E8F0; width: 100%; border-bottom: 1px dashed #CBD5E1; margin: 4px 0;}
+        .cheer-ar { grid-column: 1; font-family:'Cairo', sans-serif; font-size:13px; font-weight:800; color:var(--accent); direction:rtl; text-align:right; padding-top: 4px; line-height: 1.2;}
 
         .shake-active { animation: shake 0.4s both; }
         @keyframes shake { 0%, 100% {transform: translateX(0);} 25% {transform: translateX(-5px);} 50% {transform: translateX(5px);} 75% {transform: translateX(-5px);} }
@@ -160,7 +160,7 @@
         .ta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 30px; }
         .ta-btn { 
             background: #FFFFFF; color: var(--text-muted); border: 2px solid #E2E8F0; 
-            padding: 14px; font-size: 16px; border-radius: 14px; font-weight: 800; font-family: 'Outfit', 'Cairo'; transition: 0.3s; cursor: pointer;
+            padding: 14px; font-size: 16px; border-radius: 14px; font-weight: 800; font-family: 'Outfit', 'Cairo', sans-serif; transition: 0.3s; cursor: pointer;
         }
         .ta-btn:hover { background: #F8FAFC; color: var(--text-main); }
         .ta-btn.active { 
@@ -246,7 +246,7 @@
         .option-item.selected .opt-letter { background: var(--accent); color: #FFF; border-color: var(--accent);}
         .opt-text { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 18px; color: var(--text-main); }
 
-        .action-btns { display: flex; justify-content: space-between; gap: 15px; direction: ltr;}
+        .action-btns { display: flex; flex-direction: row-reverse; justify-content: space-between; gap: 15px; direction: ltr;}
         .btn {
             padding: 18px 28px; border-radius: 14px; font-weight: 900; font-size: 16px; border: 2px solid var(--accent);
             cursor: pointer; display: inline-flex; align-items: center; justify-content: center; gap: 8px;
@@ -262,11 +262,9 @@
         .btn-solid:hover { transform: translateY(-3px); box-shadow: 0 15px 35px var(--accent-glow);}
         .btn-solid:disabled { opacity: 0.5; cursor: wait; background: #E2E8F0; color: #94A3B8; box-shadow: none; transform: none;}
 
-        /* --- Smart Revision & Results --- */
         #result-screen { display: none; direction: rtl; }
         .score-card { background: #FFFFFF; border-radius: 24px; padding: 50px 25px; text-align: center; margin-bottom: 40px; border: 1px solid #E2E8F0; box-shadow: 0 20px 50px rgba(0,0,0,0.05); position: relative;}
         
-        /* 🏆 Giant LTR Score Circle */
         .score-circle {
             width: 240px; height: 240px; border-radius: 50%; margin: 0 auto 30px; 
             display: flex; align-items: center; justify-content: center;
@@ -277,7 +275,6 @@
         }
         #score-percent-text { font-family: 'Outfit', 'Cairo'; font-size: 24px; font-weight: 900; color: var(--accent); margin-bottom: 8px; letter-spacing: 1px;}
         
-        /* Result Student Display */
         #student-display-name { font-size: 28px; font-weight: 900; color: var(--text-main); margin-bottom: 20px; display: flex; align-items: center; justify-content: center; gap: 15px;}
         .result-avatar { 
             font-size: 35px; background: #F8FAFC; border: 3px solid var(--accent); box-shadow: 0 5px 20px var(--accent-glow);
@@ -308,7 +305,7 @@
         /* --- Anti-Cheat Modal --- */
         #cheat-modal, #pause-modal {
             display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
-            background: rgba(255, 255, 255, 0.95); z-index: 999999; align-items: center; justify-content: center; backdrop-filter: blur(15px);
+            background: rgba(255, 255, 255, 0.95); z-index: 999999; align-items: center; justify-content: center; backdrop-filter: blur(25px);
         }
         .cheat-content {
             background: #FFFFFF; padding: 50px; border-radius: 24px; text-align: center;
@@ -433,29 +430,30 @@
 
         <div class="cheer-wrapper" id="cheer-wrapper">
             <div class="cheer-bubble">
-                <img src="https://lh3.googleusercontent.com/d/1BqwA44F0BAwWMSwBnBeDIkfkNgBEtif-" alt="Mr. Ayman Kamel">
                 <div class="cheer-text">
                     <div class="cheer-en" id="cheer-en"></div>
                     <div class="cheer-separator"></div>
                     <div class="cheer-ar" id="cheer-ar"></div>
                 </div>
+                <img src="https://lh3.googleusercontent.com/d/1BqwA44F0BAwWMSwBnBeDIkfkNgBEtif-" alt="Mr. Ayman Kamel">
             </div>
         </div>
 
         <img src="https://lh3.googleusercontent.com/d/1BqwA44F0BAwWMSwBnBeDIkfkNgBEtif-" alt="Mr. Ayman Kamel Logo" onclick="triggerEasterEgg()">
         <h1>Mr. Ayman Kamel</h1>
         <p class="job-title">English Language Educator</p>
-        <p class="slogan">"Let's learn together!"</p>
+        <p class="slogan" style="unicode-bidi: isolate; direction: ltr;">"Let's learn together!"</p>
         <div class="vip-phone">📞 01284749899</div>
     </header>
 
     <div class="content-body">
         <div id="start-screen">
             <div class="welcome-card">
-                <h3>🌟 تحدي الـ 66 سؤال الشامل (الجزء الثاني)!</h3>
+                <h3>🌟 التحدي الشامل الأكبر!</h3>
                 <p>مرحباً بك في المحطة الختامية! هذه هي فرصتك الأخيرة لإثبات مدى إتقانك للقواعد بدون أي تنازلات. ثق في قدراتك، واقرأ كل كلمة بتمعن. نحن بانتظارك في القمة!<br><br>هل أنت مستعد للبدء؟</p>
             </div>
 
+            <!-- 🔥 Time Attack Grid -->
             <h4 style="color: var(--text-main); font-weight: 800; margin-bottom: 15px; text-align: center;">اختار مستوى التحدي الزمني:</h4>
             <div class="ta-grid">
                 <button type="button" class="btn ta-btn" onclick="setTimeAttack(20, this)">⚡ 20ث (أساطير)</button>
@@ -475,7 +473,8 @@
             <div class="input-group">
                 <input type="text" id="studentName" placeholder="أدخل اسمك الثلاثي لتبدأ..." autocomplete="off" onkeypress="if(event.key === 'Enter') startQuiz()">
             </div>
-            <button type="button" class="btn btn-solid" style="width:100%" onclick="startQuiz()">START GRAND FINALE ➔</button>
+            <!-- Navigation Buttons exact naming as Rule 7 -->
+            <button type="button" class="btn btn-solid" style="width:100%" onclick="startQuiz()">START ASSESSMENT ➔</button>
         </div>
 
         <div id="quiz-screen">
@@ -496,19 +495,20 @@
             <div class="station-card" id="q-box">
                 <div class="question-text">
                     <div class="question-text-wrapper">
-                        <span id="question-text-content">--</span><span class="cursor" id="typing-cursor" style="display:none;"></span>
+                        <span id="question-text-content" style="direction: ltr;">--</span><span class="cursor" id="typing-cursor" style="display:none;"></span>
                     </div>
                     <div class="tts-btn-container">
                         <button type="button" class="icon-btn" style="border-color:var(--accent); color:var(--accent); background: #FFF;" onclick="speakQuestion()" title="استماع">🔊</button>
                     </div>
                 </div>
-                <div class="options-list" id="options-list"></div>
+                <div class="options-list" id="options-list" style="direction: ltr;"></div>
             </div>
 
+            <!-- Navigation Buttons exact naming as Rule 7 -->
             <div class="action-btns">
-                <button type="button" class="btn btn-prev" id="prev-btn" onclick="prevQuestion()" disabled>⬅ PREV</button>
-                <button type="button" class="btn btn-solid" id="next-btn" onclick="nextQuestion()">NEXT ➔</button>
                 <button type="button" class="btn btn-solid" id="submit-btn" onclick="calculateScore()" style="display: none;">🚀 SUBMIT</button>
+                <button type="button" class="btn btn-solid" id="next-btn" onclick="nextQuestion()">NEXT ➔</button>
+                <button type="button" class="btn btn-prev" id="prev-btn" onclick="prevQuestion()" disabled>⬅ PREV</button>
             </div>
         </div>
 
@@ -621,16 +621,23 @@ function initScratchCard() {
     canvas.onmousemove = scratch; canvas.ontouchmove = scratch;
 }
 
+// 🔥 Rule 6: 15 Dynamic New Cheers mixing English and Egyptian Arabic
 const cheers = [
-    {en: "🚀 Keep pushing forward!", ar: "عاش يا بطل، كمل في طريقك!"},
-    {en: "🧠 Stay focused!", ar: "الله ينور، تركيزك عالي جداً!"},
-    {en: "💪 You're doing great!", ar: "مجهود جبار، متوقفش!"},
-    {en: "🌟 Trust your instincts!", ar: "خليك واثق في إجاباتك، أنت قدها!"},
-    {en: "🛡️ Every step makes you stronger!", ar: "وحش! كل سؤال بيقربك للقمة!"},
-    {en: "🔥 Don't give up!", ar: "أوعى تستسلم، هانت جداً!"},
-    {en: "🎯 Keep your eyes on the goal!", ar: "عينك على التقفيل، ركز!"},
-    {en: "🧘 Take a deep breath...", ar: "خد نفس عميق، وكمل برواقة."},
-    {en: "⚡ Your effort matters!", ar: "تعبك وتركيزك ده مش هيروح عالفاضي!"}
+    {en: "You're making it look easy!", ar: "وحش يا بني والله، كمل على كده!"},
+    {en: "Keep the momentum going!", ar: "عاش! الدوسة دي متوقفهاش!"},
+    {en: "Fantastic focus!", ar: "الله ينور، تركيزك يجيب من الآخر!"},
+    {en: "You are crushing this!", ar: "إيه الحلاوة دي، مقفل اللعبة!"},
+    {en: "Don't stop till you're proud!", ar: "مفيش يأس، هانت جداً!"},
+    {en: "Success is near!", ar: "ريحة التقفيل فايحة، دوس!"},
+    {en: "A real champion in action!", ar: "بطل من يومك، أوعى تتهز!"},
+    {en: "Breathe in, slay the question!", ar: "خد نفس عميق وفرتك السؤال!"},
+    {en: "Your hard work is paying off!", ar: "تعبك ده اللي هيخليك في القمة!"},
+    {en: "Smart choice!", ar: "دماغ شغالة مش بتنام، كمل!"},
+    {en: "Almost at the finish line!", ar: "خطوة واللعبة تخلص ليك!"},
+    {en: "You dominate the matrix!", ar: "إنت مسيطر على المصفوفة دي!"},
+    {en: "Stay sharp and alert!", ar: "خليك فايق، الغلطة بفورة!"},
+    {en: "Legendary performance!", ar: "أداء عالمي يدرس بصراحة!"},
+    {en: "The peak is yours!", ar: "القمة بتاعتك ومحدش هياخدها غيرك!"}
 ];
 let lastCheerIndex = -1; 
 function triggerTeacherCheer() {
@@ -646,7 +653,7 @@ let logoClicks = 0, logoClickTimer;
 function triggerEasterEgg() {
     logoClicks++; clearTimeout(logoClickTimer);
     logoClickTimer = setTimeout(() => { logoClicks = 0; }, 1500);
-    if(logoClicks >= 5) { soundBossWin(); alert("⚡ Luminous Nova Easter Egg Found! ⚡"); logoClicks = 0; }
+    if(logoClicks >= 5) { soundBossWin(); alert("⚡ Luminous Nova Theme Active! ⚡"); logoClicks = 0; }
 }
 
 function changeFontSize(change) {
@@ -725,9 +732,19 @@ const rawData = [
     { rule: "Present Perfect Simple", q: "How many times ........ that movie?", options: ["have you been seeing", "you have been seeing", "have you been seen", "have you seen"], answer: 3, exp: "<div class='exp-en'>💡 <b>Explanation:</b> Questions starting with 'How many times' focus on the number of completed experiences.</div><div class='exp-separator'></div><div class='exp-ar'>✨ <b>الخلاصة:</b> السؤال عن (العدد) بيركز على المرات اللي اكتمل فيها الحدث.</div>" }
 ];
 
+let timeAttackLevel = 0;
+let isTimeAttack = false;
+
+function setTimeAttack(level, el) {
+    timeAttackLevel = level;
+    isTimeAttack = (level > 0);
+    document.querySelectorAll('.ta-btn').forEach(btn => btn.classList.remove('active'));
+    el.classList.add('active');
+}
+
 let quizData = [];
 let currentQuestion = 0, userAnswers = {}, studentName = "", selectedAvatar = '🌟';
-let totalSeconds = 3960, qTimeLeft = 15, timerInterval = null, isTimeAttack = false;
+let totalSeconds = 66 * 240, qTimeLeft = 15, timerInterval = null;
 let isSubmitting = false; 
 let pauseCount = 0, isPaused = false; 
 
@@ -739,7 +756,7 @@ document.addEventListener("visibilitychange", () => {
     if (document.hidden && quizScreen.style.display === "block" && !isSubmitting) {
         cheatWarningsCount++;
         if (cheatWarningsCount > 3) {
-            alert("🚨 تم سحب الورقة تلقائياً لعدم الالتزام ببروتوكول التركيز داخل شاشة الاختبار.");
+            alert("🚨 SYSTEM OVERRIDE: تم سحب الورقة لعدم الالتزام ببروتوكول التركيز.");
             calculateScore(); 
         } else {
             document.getElementById('cheat-msg').innerText = `تم رصد خروجك من النظام.\nالتحذير (${cheatWarningsCount} من 3).\nفي المرة الرابعة سيتم سحب الورقة إجبارياً.`;
@@ -784,13 +801,6 @@ function updateChromaShift() {
     document.body.className = `theme-${levelIndex + 1}`;
 }
 
-function setTimeAttack(level, el) {
-    timeAttackLevel = level;
-    isTimeAttack = (level > 0);
-    document.querySelectorAll('.ta-btn').forEach(btn => btn.classList.remove('active'));
-    el.classList.add('active');
-}
-
 function selectAvatar(el, avatar) {
     document.querySelectorAll('.avatar-option').forEach(o => o.classList.remove('selected'));
     el.classList.add('selected'); selectedAvatar = avatar;
@@ -814,7 +824,7 @@ function startQuiz() {
     document.getElementById("hud-name").innerText = studentName;
     document.getElementById("hud-moving-avatar").innerText = selectedAvatar;
 
-    totalSeconds = quizData.length * 60; // 60 seconds per question for classic
+    totalSeconds = quizData.length * 240; // 4 mins per question for classic
     if (!isTimeAttack) {
         let m = Math.floor(totalSeconds / 60), s = totalSeconds % 60;
         let displayM = m < 100 ? (m < 10 ? '0'+m : m) : m;
@@ -880,11 +890,11 @@ function nextQuestion(force = false) {
     if (!force && userAnswers[currentQuestion] === undefined) { alert("لازم تختار إجابة الأول عشان تكمل!"); return; }
     if (currentQuestion < quizData.length - 1) { 
         currentQuestion++;
-        if (currentQuestion % 5 === 0 && currentQuestion !== 0) triggerTeacherCheer();
+        if (currentQuestion % 4 === 0 && currentQuestion !== 0) triggerTeacherCheer();
         loadQuestion();
         
         if (isTimeAttack) {
-            startTimer();
+            startTimer(); 
         }
     }
 }
@@ -917,15 +927,22 @@ function startTimer() {
             qTimeLeft--;
             let displayS = qTimeLeft < 10 ? '0' + qTimeLeft : qTimeLeft;
             document.getElementById("timer-text").innerText = `00:${displayS}`;
+            
             if (qTimeLeft <= 5) {
                 document.getElementById("timer-box").classList.add("danger");
                 document.getElementById("app-container").classList.add("shake-active");
                 setTimeout(()=> document.getElementById("app-container").classList.remove("shake-active"), 400);
-            } else { document.getElementById("timer-box").classList.remove("danger"); }
+            } else { 
+                document.getElementById("timer-box").classList.remove("danger"); 
+            }
             
             if (qTimeLeft <= 0) {
                 if(userAnswers[currentQuestion] === undefined) { userAnswers[currentQuestion] = -1; }
-                if(currentQuestion < quizData.length - 1) { nextQuestion(true); } else { calculateScore(); }
+                if(currentQuestion < quizData.length - 1) { 
+                    nextQuestion(true); 
+                } else { 
+                    calculateScore(); 
+                }
             }
         } else {
             totalSeconds--;
@@ -933,7 +950,13 @@ function startTimer() {
             let displayM = m < 100 ? (m < 10 ? '0'+m : m) : m;
             let displayS = s < 10 ? '0'+s : s;
             document.getElementById("timer-text").innerText = `${displayM}:${displayS}`;
-            if (totalSeconds <= 300) document.getElementById("timer-box").classList.add("danger");
+            
+            if (totalSeconds <= 300) {
+                document.getElementById("timer-box").classList.add("danger");
+            } else {
+                document.getElementById("timer-box").classList.remove("danger");
+            }
+            
             if (totalSeconds <= 0) { clearInterval(timerInterval); calculateScore(); }
         }
     }, 1000);
@@ -1032,7 +1055,7 @@ function calculateScore() {
             } catch(e){}
             
             try {
-                let usedTime = isTimeAttack ? "Time Attack" : ( (quizData.length * 60) - totalSeconds) + " Seconds";
+                let usedTime = isTimeAttack ? "Time Attack" : ( (quizData.length * 240) - totalSeconds) + " Seconds";
                 let wrongAnswersText = wrongAnswersArray.length > 0 
                     ? wrongAnswersArray.join('') 
                     : "<p style='text-align:center; font-weight:bold; color:#10B981; font-size: 16px;'>Excellent! The student made zero mistakes. 🎉</p>";
@@ -1054,7 +1077,7 @@ function calculateScore() {
 }
 
 function shareToParentWhatsApp() {
-    let txt = `👨‍👩‍👧 تقرير أداء - التقييم الشامل الأكبر (الجزء الثاني)\n👤 الطالب: ${studentName}\n📊 النسبة: ${finalPercent}%\n✨ تحت إشراف مستر أيمن كامل.`;
+    let txt = `👨‍👩‍👧 تقرير أداء - التقييم الشامل (الجزء الثاني)\n👤 الطالب: ${studentName}\n📊 النسبة: ${finalPercent}%\n✨ تحت إشراف مستر أيمن كامل.`;
     window.open(`https://wa.me/?text=${encodeURIComponent(txt)}`, '_blank');
 }
 function shareToTeacherWhatsApp() {
@@ -1062,7 +1085,7 @@ function shareToTeacherWhatsApp() {
     window.open(`https://wa.me/201284749899?text=${encodeURIComponent(txt)}`, '_blank');
 }
 function sharePeerChallenge() {
-    let txt = `🔥 أنا جبت ${finalPercent}% في التحدي الشامل الأكبر (66 سؤال) لمستر أيمن كامل! تقدر تكسر السكور بتاعي؟ 🚀`;
+    let txt = `🔥 أنا جبت ${finalPercent}% في التحدي الشامل (66 سؤال) لمستر أيمن كامل! تقدر تكسر السكور بتاعي؟ 🚀`;
     window.open(`https://wa.me/?text=${encodeURIComponent(txt)}`, '_blank');
 }
 
